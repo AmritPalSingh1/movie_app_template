@@ -1,2 +1,30 @@
-body {
-  background-color: #444; }
+* {
+  margin: 0; }
+
+header .topbar {
+  display: flex;
+  justify-content: around;
+  padding: 2rem 0;
+  border-bottom: 1px solid #ff214f; }
+  header .topbar div {
+    flex: 1; }
+  header .topbar .left {
+    text-align: left; }
+  header .topbar .middle {
+    text-align: center; }
+  header .topbar .right {
+    text-align: right; }
+
+header .menu {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid black; }
+  header .menu .menu-nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; }
+    header .menu .menu-nav .nav-link {
+      display: inline;
+      padding: 0.7rem; }
+      header .menu .menu-nav .nav-link a {
+        text-decoration: none; }

@@ -1,5 +1,49 @@
-$primary-color: #444;
+$primary-color: #ff214f;
 
-body {
-  background-color: $primary-color;
+* {
+  margin: 0;
+}
+
+header {
+  .topbar {
+    display: flex;
+    justify-content: around;
+    padding: 2rem 0;
+    border-bottom: 1px solid $primary-color;
+
+    div {
+      flex: 1;
+    }
+
+    .left {
+      text-align: left;
+    }
+    .middle {
+      text-align: center;
+    }
+    .right {
+      text-align: right;
+    }
+  }
+
+  .menu {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid black;
+
+    .menu-nav {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+
+      .nav-link {
+        display: inline;
+        padding: 0.7rem;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
