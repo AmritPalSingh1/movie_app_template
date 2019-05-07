@@ -1,34 +1,110 @@
-$primary-color: #ff214f;
+@import "config";
 
 * {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
+  font-family: "Mukta", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.container {
+  padding-right: 7rem;
+  padding-left: 7rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1400px;
 }
 
 header {
   .topbar {
-    display: flex;
-    justify-content: around;
-    padding: 2rem 0;
-    border-bottom: 1px solid $primary-color;
+    padding: 1.7rem 0;
+    border-bottom: 1.2px solid #e8edf1;
 
-    div {
-      flex: 1;
-    }
+    .topbar-flex-container {
+      display: flex;
+      justify-content: around;
+      align-items: center;
+      div {
+        flex: 1;
+      }
 
-    .left {
-      text-align: left;
-    }
-    .middle {
-      text-align: center;
-    }
-    .right {
-      text-align: right;
+      .left {
+        text-align: left;
+
+        .search {
+          position: relative;
+          width: 220px;
+          height: 2.6rem;
+          overflow: hidden;
+          border: 1.5px solid;
+          border-color: #e8edf1;
+          border-radius: 22px;
+
+          input {
+            color: $dark-color;
+            font-size: 1rem;
+            width: 100%;
+            height: 100%;
+            padding-right: 45px;
+            padding-left: 25px;
+            border: none;
+            overflow: visible;
+            outline: 0;
+          }
+
+          .search-symbol {
+            width: 45px;
+            height: 100%;
+            color: #222;
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            background: 0 0;
+            outline: 0;
+
+            @include easeOut-fast;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+      .middle {
+        text-align: center;
+      }
+      .right {
+        text-align: right;
+
+        a {
+          text-decoration: none;
+          color: $dark-color;
+          font-weight: bold;
+          padding: 0 0.5rem;
+
+          @include easeOut-fast;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
     }
   }
 
   .menu {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid black;
+    padding: 1.6rem 0;
 
     .menu-nav {
       list-style-type: none;
@@ -38,12 +114,28 @@ header {
 
       .nav-link {
         display: inline;
-        padding: 0.7rem;
+        padding: 1.2rem;
 
         a {
           text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: $dark-color;
+          font-weight: 300;
+          font-size: 0.98rem;
+          @include easeOut-fast;
+
+          &.active {
+            color: $primary-color;
+          }
+
+          &:hover {
+            color: $primary-color;
+          }
         }
       }
     }
   }
 }
+
+@import "mobile";

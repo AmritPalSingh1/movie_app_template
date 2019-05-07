@@ -1,23 +1,86 @@
 * {
-  margin: 0; }
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Mukta", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+  line-height: 1.7; }
+
+.container {
+  padding-right: 7rem;
+  padding-left: 7rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1400px; }
 
 header .topbar {
-  display: flex;
-  justify-content: around;
-  padding: 2rem 0;
-  border-bottom: 1px solid #ff214f; }
-  header .topbar div {
-    flex: 1; }
-  header .topbar .left {
-    text-align: left; }
-  header .topbar .middle {
-    text-align: center; }
-  header .topbar .right {
-    text-align: right; }
+  padding: 1.7rem 0;
+  border-bottom: 1.2px solid #e8edf1; }
+  header .topbar .topbar-flex-container {
+    display: flex;
+    justify-content: around;
+    align-items: center; }
+    header .topbar .topbar-flex-container div {
+      flex: 1; }
+    header .topbar .topbar-flex-container .left {
+      text-align: left; }
+      header .topbar .topbar-flex-container .left .search {
+        position: relative;
+        width: 220px;
+        height: 2.6rem;
+        overflow: hidden;
+        border: 1.5px solid;
+        border-color: #e8edf1;
+        border-radius: 22px; }
+        header .topbar .topbar-flex-container .left .search input {
+          color: #25262a;
+          font-size: 1rem;
+          width: 100%;
+          height: 100%;
+          padding-right: 45px;
+          padding-left: 25px;
+          border: none;
+          overflow: visible;
+          outline: 0; }
+        header .topbar .topbar-flex-container .left .search .search-symbol {
+          width: 45px;
+          height: 100%;
+          color: #222;
+          position: absolute;
+          right: 0;
+          top: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border: none;
+          background: 0 0;
+          outline: 0;
+          transition: all 0.2s ease-out;
+          -webkit-transition: all 0.2s ease-out;
+          -moz-transition: all 0.2s ease-out;
+          -ms-transition: all 0.2s ease-out; }
+          header .topbar .topbar-flex-container .left .search .search-symbol:hover {
+            color: #23b1ec; }
+    header .topbar .topbar-flex-container .middle {
+      text-align: center; }
+    header .topbar .topbar-flex-container .right {
+      text-align: right; }
+      header .topbar .topbar-flex-container .right a {
+        text-decoration: none;
+        color: #25262a;
+        font-weight: bold;
+        padding: 0 0.5rem;
+        transition: all 0.2s ease-out;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out; }
+        header .topbar .topbar-flex-container .right a:hover {
+          color: #000; }
 
 header .menu {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid black; }
+  padding: 1.6rem 0; }
   header .menu .menu-nav {
     list-style-type: none;
     padding: 0;
@@ -25,6 +88,35 @@ header .menu {
     text-align: center; }
     header .menu .menu-nav .nav-link {
       display: inline;
-      padding: 0.7rem; }
+      padding: 1.2rem; }
       header .menu .menu-nav .nav-link a {
-        text-decoration: none; }
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #25262a;
+        font-weight: 300;
+        font-size: 0.98rem;
+        transition: all 0.2s ease-out;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out; }
+        header .menu .menu-nav .nav-link a.active {
+          color: #23b1ec; }
+        header .menu .menu-nav .nav-link a:hover {
+          color: #23b1ec; }
+
+@media (max-width: 1200px) {
+  .container {
+    padding-right: 5rem;
+    padding-left: 5rem; } }
+
+@media (max-width: 992px) {
+  .container {
+    padding-right: 3rem;
+    padding-left: 3rem; } }
+
+@media (max-width: 600px) {
+  .container {
+    width: auto;
+    padding-right: 1rem;
+    padding-left: 1rem; } }
