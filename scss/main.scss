@@ -91,12 +91,14 @@ header {
           text-decoration: none;
           color: $dark-color;
           font-weight: bold;
-          padding: 0 0.5rem;
+          margin: 0 0.5rem;
 
           @include easeOut-fast;
 
           &:hover {
             color: #000;
+            border-bottom: 1.5px solid $primary-color;
+            border-width: 50%;
           }
         }
       }

@@ -57,10 +57,10 @@ header .topbar {
           border: none;
           background: 0 0;
           outline: 0;
-          transition: all 0.2s ease-out;
-          -webkit-transition: all 0.2s ease-out;
-          -moz-transition: all 0.2s ease-out;
-          -ms-transition: all 0.2s ease-out; }
+          transition: all 0.25s ease-out;
+          -webkit-transition: all 0.25s ease-out;
+          -moz-transition: all 0.25s ease-out;
+          -ms-transition: all 0.25s ease-out; }
           header .topbar .topbar-flex-container .left .search .search-symbol:hover {
             color: #23b1ec; }
     header .topbar .topbar-flex-container .middle {
@@ -71,13 +71,15 @@ header .topbar {
         text-decoration: none;
         color: #25262a;
         font-weight: bold;
-        padding: 0 0.5rem;
-        transition: all 0.2s ease-out;
-        -webkit-transition: all 0.2s ease-out;
-        -moz-transition: all 0.2s ease-out;
-        -ms-transition: all 0.2s ease-out; }
+        margin: 0 0.5rem;
+        transition: all 0.25s ease-out;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        -ms-transition: all 0.25s ease-out; }
         header .topbar .topbar-flex-container .right a:hover {
-          color: #000; }
+          color: #000;
+          border-bottom: 1.5px solid #23b1ec;
+          border-width: 50%; }
 
 header .menu {
   padding: 1.6rem 0; }
@@ -96,10 +98,10 @@ header .menu {
         color: #25262a;
         font-weight: 300;
         font-size: 0.98rem;
-        transition: all 0.2s ease-out;
-        -webkit-transition: all 0.2s ease-out;
-        -moz-transition: all 0.2s ease-out;
-        -ms-transition: all 0.2s ease-out; }
+        transition: all 0.25s ease-out;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        -ms-transition: all 0.25s ease-out; }
         header .menu .menu-nav .nav-link a.active {
           color: #23b1ec; }
         header .menu .menu-nav .nav-link a:hover {
@@ -113,10 +115,24 @@ header .menu {
 @media (max-width: 992px) {
   .container {
     padding-right: 3rem;
-    padding-left: 3rem; } }
+    padding-left: 3rem; }
+  .topbar-flex-container .left {
+    display: none; }
+  .topbar-flex-container .middle {
+    text-align: left !important;
+    padding-left: 1.5rem; } }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .container {
     width: auto;
     padding-right: 1rem;
-    padding-left: 1rem; } }
+    padding-left: 1rem; }
+  .menu-nav {
+    display: flex;
+    justify-content: space-around; }
+    .menu-nav .nav-link {
+      padding: 0 !important; }
+      .menu-nav .nav-link .nav-icon {
+        font-size: 1.33rem; }
+    .menu-nav .nav-item {
+      display: none; } }

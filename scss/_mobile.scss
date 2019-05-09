@@ -10,12 +10,39 @@
     padding-right: 3rem;
     padding-left: 3rem;
   }
+
+  .topbar-flex-container {
+    .left {
+      display: none;
+    }
+
+    .middle {
+      text-align: left !important;
+      padding-left: 1.5rem;
+    }
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .container {
     width: auto;
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+
+  .menu-nav {
+    display: flex;
+    justify-content: space-around;
+
+    .nav-link {
+      padding: 0 !important;
+
+      .nav-icon {
+        font-size: 1.33rem;
+      }
+    }
+    .nav-item {
+      display: none;
+    }
   }
 }
