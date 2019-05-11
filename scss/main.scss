@@ -13,6 +13,17 @@ body {
   line-height: 1.7;
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+p {
+  font-weight: 300;
+  color: $dark-color;
+}
+
 .container {
   padding-right: 7rem;
   padding-left: 7rem;
@@ -24,7 +35,7 @@ body {
 header {
   .topbar {
     padding: 1.7rem 0;
-    border-bottom: 1.2px solid #e8edf1;
+    // border-bottom: 1.2px solid #e8edf1;
 
     .topbar-flex-container {
       display: flex;
@@ -106,6 +117,8 @@ header {
   }
 
   .menu {
+    background-color: $primary-color;
+    color: #fff;
     padding: 1.6rem 0;
 
     .menu-nav {
@@ -117,25 +130,55 @@ header {
       .nav-link {
         display: inline;
         padding: 1.2rem;
-
+        padding-bottom: 0;
         a {
           text-decoration: none;
           text-transform: uppercase;
           letter-spacing: 0.05em;
-          color: $dark-color;
+          color: #fff;
           font-weight: 300;
           font-size: 0.98rem;
+          padding-bottom: 5px;
           @include easeOut-fast;
 
           &.active {
-            color: $primary-color;
+            border-bottom: 1.3px solid $dark-color;
           }
 
           &:hover {
-            color: $primary-color;
+            color: $dark-color;
           }
         }
       }
+    }
+  }
+}
+
+.dark-overlay {
+  height: 100%;
+  // position: absolute;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movie-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .dark-overlay {
+    padding: 1rem 2rem;
+    text-align: center;
+
+    h2 {
+      padding: 4rem 0 1rem 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1rem;
+      padding: 0 5rem 5rem 5rem;
+      color: #fff;
     }
   }
 }
