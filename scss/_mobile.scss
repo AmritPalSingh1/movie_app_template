@@ -21,6 +21,16 @@
       padding-left: 1.5rem;
     }
   }
+
+  .movie-bg {
+    .d-flex {
+      margin: 0 -2.5rem;
+      // flex-direction: column;
+      // .movie-details {
+      //   width: 100% !important;
+      // }
+    }
+  }
 }
 
 @media (max-width: 700px) {
@@ -54,5 +64,74 @@
     .right {
       font-size: 0.9rem;
     }
+  }
+
+  .movie-bg {
+    .dark-overlay {
+      padding: 0;
+      .container {
+        padding: 0;
+      }
+    }
+
+    .d-flex {
+      margin: 0;
+      flex-direction: column;
+      .movie-details {
+        width: 100% !important;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        text-align: left !important;
+
+        h2 {
+          padding: 2rem 0 1rem 0 !important;
+          margin-bottom: 0 !important;
+        }
+        p {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+          padding-bottom: 6rem;
+        }
+
+        .grade-with-movie {
+          display: inline !important;
+        }
+        h3 {
+          padding-top: 1rem;
+          padding-bottom: 4rem !important;
+          display: none !important;
+        }
+      }
+
+      .grade-movie {
+        padding: 2rem 2rem;
+        padding-bottom: 4rem !important;
+        width: 100% !important;
+        color: $dark-color;
+        background-color: #fff;
+        margin-top: -3rem;
+
+        .grade-box {
+          width: 100% !important;
+          background-color: $dark-color !important;
+
+          .width-animation {
+            &.active {
+              width: 100% !important;
+            }
+          }
+
+          &:hover {
+            .width-animation {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .movie-bg {
+    background-position: top;
   }
 }

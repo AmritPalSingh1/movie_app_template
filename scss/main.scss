@@ -13,6 +13,11 @@ body {
   line-height: 1.7;
 }
 
+// utility classes
+.text-blue {
+  color: $primary-color;
+}
+
 h2 {
   font-size: 2rem;
   font-weight: 500;
@@ -160,14 +165,16 @@ header {
 
 .dark-overlay {
   height: 100%;
-  // position: absolute;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.58);
 }
 
 .movie-bg {
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
   background-position: center;
 
   .dark-overlay {
@@ -185,7 +192,7 @@ header {
         }
         p {
           font-size: 1rem;
-          color: #fff;
+          color: #f8f9fa;
           letter-spacing: 0.05rem;
         }
 
@@ -198,10 +205,110 @@ header {
           .grade {
             color: $primary-color;
             font-size: 2rem;
-            padding: 0 1rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 50%;
             margin-left: 0.6rem;
+          }
+        }
+
+        .grade-with-movie {
+          text-transform: none;
+          font-size: 1.2rem;
+          color: #f8f9fa;
+          display: none;
+        }
+      }
+      .grade-movie {
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 2rem;
+
+        h3 {
+          text-align: left;
+        }
+
+        .grade-box {
+          width: 300px;
+          height: 40px;
+          background-color: rgba(0, 0, 0, 0.5);
+          text-align: left;
+          cursor: pointer;
+          display: flex;
+          margin-bottom: 3px;
+          color: $dark-color;
+          font-weight: bold;
+
+          &.s {
+            .width-animation,
+            .grade-letter {
+              background-color: #fe5196;
+            }
+          }
+          &.a {
+            .width-animation,
+            .grade-letter {
+              background-color: #e6b980;
+            }
+          }
+          &.b {
+            .width-animation,
+            .grade-letter {
+              background-color: #84fab0;
+            }
+          }
+          &.c {
+            .width-animation,
+            .grade-letter {
+              background-color: #38f9d7;
+            }
+          }
+          &.d {
+            .width-animation,
+            .grade-letter {
+              background-color: #00f2fe;
+            }
+          }
+          &.e {
+            .width-animation,
+            .grade-letter {
+              background-color: #4facfe;
+            }
+          }
+          &.f {
+            .width-animation,
+            .grade-letter {
+              background-color: #d57eeb;
+            }
+          }
+
+          .width-animation {
+            width: 0;
+            height: 40px;
+            @include easeOut;
+
+            &.active {
+              width: 265px;
+            }
+          }
+
+          &:hover {
+            .width-animation {
+              width: 265px;
+            }
+          }
+
+          .grade-letter {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
         }
       }

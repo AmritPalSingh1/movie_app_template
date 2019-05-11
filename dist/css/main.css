@@ -7,6 +7,9 @@ body {
   font-weight: 400;
   line-height: 1.7; }
 
+.text-blue {
+  color: #23b1ec; }
+
 h2 {
   font-size: 2rem;
   font-weight: 500;
@@ -125,11 +128,14 @@ header .menu {
 .dark-overlay {
   height: 100%;
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.58); }
 
 .movie-bg {
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
   background-position: center; }
   .movie-bg .dark-overlay {
     padding: 1rem 2rem;
@@ -142,7 +148,7 @@ header .menu {
         padding: 2.3rem 0 0.6rem 0; }
       .movie-bg .dark-overlay .d-flex .movie-details p {
         font-size: 1rem;
-        color: #fff;
+        color: #f8f9fa;
         letter-spacing: 0.05rem; }
       .movie-bg .dark-overlay .d-flex .movie-details h3 {
         padding-bottom: 2rem;
@@ -152,10 +158,74 @@ header .menu {
         .movie-bg .dark-overlay .d-flex .movie-details h3 .grade {
           color: #23b1ec;
           font-size: 2rem;
-          padding: 0 1rem;
+          width: 3.5rem;
+          height: 3.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           background-color: rgba(0, 0, 0, 0.7);
           border-radius: 50%;
           margin-left: 0.6rem; }
+      .movie-bg .dark-overlay .d-flex .movie-details .grade-with-movie {
+        text-transform: none;
+        font-size: 1.2rem;
+        color: #f8f9fa;
+        display: none; }
+    .movie-bg .dark-overlay .d-flex .grade-movie {
+      align-self: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 2rem; }
+      .movie-bg .dark-overlay .d-flex .grade-movie h3 {
+        text-align: left; }
+      .movie-bg .dark-overlay .d-flex .grade-movie .grade-box {
+        width: 300px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        margin-bottom: 3px;
+        color: #25262a;
+        font-weight: bold; }
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.s .width-animation,
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.s .grade-letter {
+          background-color: #fe5196; }
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.a .width-animation,
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.a .grade-letter {
+          background-color: #e6b980; }
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.b .width-animation,
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.b .grade-letter {
+          background-color: #84fab0; }
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.c .width-animation,
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.c .grade-letter {
+          background-color: #38f9d7; }
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.d .width-animation,
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.d .grade-letter {
+          background-color: #00f2fe; }
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.e .width-animation,
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.e .grade-letter {
+          background-color: #4facfe; }
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.f .width-animation,
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box.f .grade-letter {
+          background-color: #d57eeb; }
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box .width-animation {
+          width: 0;
+          height: 40px;
+          transition: all 0.5s ease-out;
+          -webkit-transition: all 0.5s ease-out;
+          -moz-transition: all 0.5s ease-out;
+          -ms-transition: all 0.5s ease-out; }
+          .movie-bg .dark-overlay .d-flex .grade-movie .grade-box .width-animation.active {
+            width: 265px; }
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box:hover .width-animation {
+          width: 265px; }
+        .movie-bg .dark-overlay .d-flex .grade-movie .grade-box .grade-letter {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
 
 @media (max-width: 1200px) {
   .container {
@@ -170,7 +240,9 @@ header .menu {
     display: none; }
   .topbar-flex-container .middle {
     text-align: left !important;
-    padding-left: 1.5rem; } }
+    padding-left: 1.5rem; }
+  .movie-bg .d-flex {
+    margin: 0 -2.5rem; } }
 
 @media (max-width: 700px) {
   .container {
@@ -189,4 +261,45 @@ header .menu {
   .topbar-flex-container .middle {
     padding-left: 0.5rem; }
   .topbar-flex-container .right {
-    font-size: 0.9rem; } }
+    font-size: 0.9rem; }
+  .movie-bg .dark-overlay {
+    padding: 0; }
+    .movie-bg .dark-overlay .container {
+      padding: 0; }
+  .movie-bg .d-flex {
+    margin: 0;
+    flex-direction: column; }
+    .movie-bg .d-flex .movie-details {
+      width: 100% !important;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      text-align: left !important; }
+      .movie-bg .d-flex .movie-details h2 {
+        padding: 2rem 0 1rem 0 !important;
+        margin-bottom: 0 !important; }
+      .movie-bg .d-flex .movie-details p {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 6rem; }
+      .movie-bg .d-flex .movie-details .grade-with-movie {
+        display: inline !important; }
+      .movie-bg .d-flex .movie-details h3 {
+        padding-top: 1rem;
+        padding-bottom: 4rem !important;
+        display: none !important; }
+    .movie-bg .d-flex .grade-movie {
+      padding: 2rem 2rem;
+      padding-bottom: 4rem !important;
+      width: 100% !important;
+      color: #25262a;
+      background-color: #fff;
+      margin-top: -3rem; }
+      .movie-bg .d-flex .grade-movie .grade-box {
+        width: 100% !important;
+        background-color: #25262a !important; }
+        .movie-bg .d-flex .grade-movie .grade-box .width-animation.active {
+          width: 100% !important; }
+        .movie-bg .d-flex .grade-movie .grade-box:hover .width-animation {
+          width: 100% !important; }
+  .movie-bg {
+    background-position: top; } }
