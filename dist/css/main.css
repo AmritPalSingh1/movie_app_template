@@ -23,6 +23,9 @@ p {
   margin-left: auto;
   max-width: 1400px; }
 
+.d-flex {
+  display: flex; }
+
 header .topbar {
   padding: 1.7rem 0; }
   header .topbar .topbar-flex-container {
@@ -131,13 +134,28 @@ header .menu {
   .movie-bg .dark-overlay {
     padding: 1rem 2rem;
     text-align: center; }
-    .movie-bg .dark-overlay h2 {
-      padding: 4rem 0 1rem 0;
-      text-transform: uppercase; }
-    .movie-bg .dark-overlay p {
-      font-size: 1rem;
-      padding: 0 5rem 5rem 5rem;
-      color: #fff; }
+    .movie-bg .dark-overlay .d-flex .movie-details {
+      width: 50%;
+      text-align: center; }
+      .movie-bg .dark-overlay .d-flex .movie-details h2 {
+        text-transform: uppercase;
+        padding: 2.3rem 0 0.6rem 0; }
+      .movie-bg .dark-overlay .d-flex .movie-details p {
+        font-size: 1rem;
+        color: #fff;
+        letter-spacing: 0.05rem; }
+      .movie-bg .dark-overlay .d-flex .movie-details h3 {
+        padding-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .movie-bg .dark-overlay .d-flex .movie-details h3 .grade {
+          color: #23b1ec;
+          font-size: 2rem;
+          padding: 0 1rem;
+          background-color: rgba(0, 0, 0, 0.7);
+          border-radius: 50%;
+          margin-left: 0.6rem; }
 
 @media (max-width: 1200px) {
   .container {

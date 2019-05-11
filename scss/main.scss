@@ -32,6 +32,10 @@ p {
   max-width: 1400px;
 }
 
+.d-flex {
+  display: flex;
+}
+
 header {
   .topbar {
     padding: 1.7rem 0;
@@ -170,15 +174,37 @@ header {
     padding: 1rem 2rem;
     text-align: center;
 
-    h2 {
-      padding: 4rem 0 1rem 0;
-      text-transform: uppercase;
-    }
+    .d-flex {
+      .movie-details {
+        width: 50%;
+        text-align: center;
 
-    p {
-      font-size: 1rem;
-      padding: 0 5rem 5rem 5rem;
-      color: #fff;
+        h2 {
+          text-transform: uppercase;
+          padding: 2.3rem 0 0.6rem 0;
+        }
+        p {
+          font-size: 1rem;
+          color: #fff;
+          letter-spacing: 0.05rem;
+        }
+
+        h3 {
+          padding-bottom: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .grade {
+            color: $primary-color;
+            font-size: 2rem;
+            padding: 0 1rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            margin-left: 0.6rem;
+          }
+        }
+      }
     }
   }
 }
