@@ -6,7 +6,6 @@ function fixBackgroundMovieImage(mobile) {
   if (mobile.matches) {
     movieImage.style.backgroundSize =
       "700px " + movieDetails.offsetHeight + "px";
-    console.log(movieDetails.offsetHeight);
   } else {
     movieImage.style.backgroundSize = "cover";
   }

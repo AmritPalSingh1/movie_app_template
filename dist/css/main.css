@@ -10,6 +10,21 @@ body {
 .text-blue {
   color: #23b1ec; }
 
+.btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #23b1ec;
+  padding: 0.3rem 1.5rem;
+  display: inline-block;
+  border: 1px solid #23b1ec;
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out; }
+  .btn:hover {
+    background-color: #fff;
+    color: #23b1ec; }
+
 h2 {
   font-size: 2rem;
   font-weight: 500;
@@ -27,12 +42,14 @@ p {
   max-width: 1400px; }
 
 .d-flex {
-  display: flex; }
+  display: flex;
+  display: -webkit-flex; }
 
 header .topbar {
   padding: 1.7rem 0; }
   header .topbar .topbar-flex-container {
     display: flex;
+    display: -webkit-flex;
     justify-content: around;
     align-items: center; }
     header .topbar .topbar-flex-container div {
@@ -65,6 +82,7 @@ header .topbar {
           right: 0;
           top: 0;
           display: flex;
+          display: -webkit-flex;
           align-items: center;
           justify-content: center;
           cursor: pointer;
@@ -153,6 +171,7 @@ header .menu {
       .movie-bg .dark-overlay .d-flex .movie-details h3 {
         padding-bottom: 2rem;
         display: flex;
+        display: -webkit-flex;
         justify-content: center;
         align-items: center; }
         .movie-bg .dark-overlay .d-flex .movie-details h3 .grade {
@@ -161,6 +180,7 @@ header .menu {
           width: 3.5rem;
           height: 3.5rem;
           display: flex;
+          display: -webkit-flex;
           justify-content: center;
           align-items: center;
           background-color: rgba(0, 0, 0, 0.7);
@@ -185,6 +205,7 @@ header .menu {
         text-align: left;
         cursor: pointer;
         display: flex;
+        display: -webkit-flex;
         margin-bottom: 3px;
         color: #25262a;
         font-weight: bold; }
@@ -224,8 +245,71 @@ header .menu {
           width: 40px;
           height: 40px;
           display: flex;
+          display: -webkit-flex;
           justify-content: center;
           align-items: center; }
+
+.movie-info {
+  display: flex;
+  display: -webkit-flex;
+  padding-top: 5rem; }
+  .movie-info .details {
+    display: flex;
+    display: -webkit-flex; }
+    .movie-info .details .movie-image {
+      padding: 0 2rem; }
+      .movie-info .details .movie-image img {
+        height: 420px; }
+    .movie-info .details .full-details h4 {
+      font-weight: 500;
+      font-size: 1.4rem;
+      margin: 0; }
+    .movie-info .details .full-details .double-lines {
+      border-top: 1px dotted #23b1ec;
+      border-bottom: 1px dotted #23b1ec;
+      height: 4px;
+      width: 100px; }
+    .movie-info .details .full-details .genre-list,
+    .movie-info .details .full-details .director {
+      margin: 0.8rem 0;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .movie-info .details .full-details .genre-list .genre-item,
+      .movie-info .details .full-details .genre-list .item,
+      .movie-info .details .full-details .director .genre-item,
+      .movie-info .details .full-details .director .item {
+        border: 1px solid #25262a;
+        color: #25262a;
+        font-weight: 300;
+        padding: 0.1rem 0.7rem;
+        margin: 0.1rem;
+        border-radius: 7px;
+        box-shadow: 1px 1px; }
+      .movie-info .details .full-details .genre-list .director-heading,
+      .movie-info .details .full-details .director .director-heading {
+        padding-top: 0.1rem;
+        margin: 0.1rem;
+        margin-right: 10px;
+        font-weight: bold; }
+    .movie-info .details .full-details .director {
+      margin-bottom: 1.5rem; }
+    .movie-info .details .full-details .fa-hourglass-start,
+    .movie-info .details .full-details .fa-clock {
+      padding: 0.8rem;
+      margin-right: 1rem;
+      border: 1px solid #23b1ec;
+      min-width: 50px;
+      text-align: center;
+      font-size: 1.4rem; }
+    .movie-info .details .full-details h5 {
+      font-size: 1.1rem;
+      font-weight: 500; }
+    .movie-info .details .full-details .date-released,
+    .movie-info .details .full-details .runtime {
+      margin: 1rem 0; }
+    .movie-info .details .full-details a {
+      margin-top: 1rem; }
 
 @media (max-width: 1200px) {
   .container {
