@@ -17,6 +17,9 @@ body {
 .text-blue {
   color: $primary-color;
 }
+.bg-white {
+  background-color: #fff;
+}
 
 .btn {
   text-decoration: none;
@@ -25,8 +28,6 @@ body {
   padding: 0.3rem 1.5rem;
   display: inline-block;
   border: 1px solid $primary-color;
-
-  // border-radius: 50px;
 
   @include easeOut;
 
@@ -52,7 +53,7 @@ p {
   padding-left: 7rem;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1400px;
+  max-width: 1350px;
 }
 
 .d-flex {
@@ -63,7 +64,6 @@ p {
 header {
   .topbar {
     padding: 1.7rem 0;
-    // border-bottom: 1.2px solid #e8edf1;
 
     .topbar-flex-container {
       display: flex;
@@ -148,6 +148,13 @@ header {
     }
   }
 
+  .sticky {
+    position: fixed;
+    top: 0;
+    padding-top: 78.4px;
+    width: 100%;
+  }
+
   .menu {
     background-color: $primary-color;
     color: #fff;
@@ -184,6 +191,10 @@ header {
       }
     }
   }
+}
+
+.fix-padding {
+  padding-top: 78.4px;
 }
 
 .dark-overlay {
@@ -348,29 +359,25 @@ header {
 }
 
 .movie-info {
-  display: flex;
-  display: -webkit-flex;
+  // background-color: #f8f9fa;
 
   padding-top: 5rem;
 
   .details {
     display: flex;
     display: -webkit-flex;
-
+    width: 65%;
     .movie-image {
-      padding: 0 2rem;
-
       img {
         height: 420px;
       }
     }
 
     .full-details {
+      padding: 0 2rem;
       h4 {
-        // color: $primary-color;
         font-weight: 500;
         font-size: 1.4rem;
-        // border-bottom: 1px solid $primary-color;
         margin: 0;
       }
 
@@ -431,6 +438,71 @@ header {
 
       a {
         margin-top: 1rem;
+      }
+    }
+  }
+
+  .reviews {
+    width: 35%;
+    border: 1.2px solid #e8edf1;
+
+    .reviews-top {
+      background-color: $light-blue;
+      text-align: center;
+      font-size: 1.1rem;
+      padding: 0.6rem;
+
+      span {
+        background-color: #fff;
+        padding: 0.2rem 1rem;
+        font-weight: 300;
+        border-radius: 50px;
+      }
+    }
+
+    .reviews-body {
+      padding: 0 2.5rem;
+
+      .add-review {
+        display: block;
+        width: 100%;
+        margin-top: 2rem;
+        padding: 1rem;
+        border-radius: 5px;
+        font-size: 1.1rem;
+      }
+
+      .submit-review {
+        text-align: right;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+
+        .btn {
+          font-size: 1rem;
+          cursor: pointer;
+        }
+      }
+
+      .review {
+        border-top: 1.2px solid #e8edf1;
+        padding: 0.6rem 0;
+
+        .review-details {
+          font-size: 0.9rem;
+          color: #aaa;
+          justify-content: space-between;
+          margin-bottom: 0.7rem;
+
+          a {
+            color: #aaa;
+            text-decoration: none;
+            @include easeOut-fast;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
       }
     }
   }

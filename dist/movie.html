@@ -48,7 +48,7 @@
       </div>
 
       <!-- Navbar -->
-      <nav class="menu">
+      <nav class="menu sticky-top">
         <ul class="menu-nav">
           <li class="nav-link">
             <a href="" class=""
@@ -145,38 +145,89 @@
         </div>
       </section>
 
-      <section class="movie-info container">
-        <div class="details">
-          <div class="movie-image">
-            <img
-              src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/svIDTNUoajS8dLEo7EosxvyAsgJ.jpg"
-              alt=""
-            />
+      <section class="movie-info">
+        <div class="container d-flex">
+          <div class="details bg-white">
+            <div class="movie-image">
+              <img
+                src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/svIDTNUoajS8dLEo7EosxvyAsgJ.jpg"
+                alt=""
+              />
+            </div>
+            <div class="full-details">
+              <h4 class="genre">Genre</h4>
+              <div class="double-lines"></div>
+              <div class="genre-list">
+                <div class="genre-item">Action</div>
+                <div class="genre-item">Adventure</div>
+              </div>
+              <h4 class="crew">Featured Crew</h4>
+              <div class="double-lines"></div>
+              <div class="director">
+                <div class="director-heading">Director</div>
+                <div class="item">Christopher Smith</div>
+              </div>
+              <h5 class="runtime">
+                <i class="fas fa-hourglass-start"></i>99min
+              </h5>
+              <h5 class="date-released">
+                <i class="far fa-clock"></i>February 2, 2010
+              </h5>
+              <a href="" class="btn"
+                ><i class="far fa-bookmark"></i> Want to see</a
+              >
+              <a href="" class="btn"
+                ><i class="far fa-star"></i> Add to Top 10</a
+              >
+            </div>
           </div>
-          <div class="full-details">
-            <h4 class="genre">Genre</h4>
-            <div class="double-lines"></div>
-            <div class="genre-list">
-              <div class="genre-item">Action</div>
-              <div class="genre-item">Adventure</div>
+          <div class="reviews">
+            <div class="reviews-top"><span>Reviews</span></div>
+            <div class="reviews-body">
+              <textarea
+                class="add-review"
+                placeholder="Add review..."
+                name=""
+                id=""
+                rows="5"
+              ></textarea>
+              <div class="submit-review">
+                <button class="btn">Save</button>
+              </div>
+
+              <div class="review">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                  earum temporibus laudantium? Eos accusamus ipsam adipisci
+                  beatae ut hic inventore.
+                </p>
+                <div class="review-details d-flex">
+                  <div><a href="">John Doe</a></div>
+                  <div>10 min ago</div>
+                  <div>
+                    <a href=""><i class="fas fa-arrow-up"></i></a> 10
+                    <a href=""><i class="fas fa-arrow-down"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="review">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+                  earum temporibus laudantium? Eos accusamus ipsam adipisci
+                  beatae ut hic inventore.
+                </p>
+                <div class="review-details d-flex">
+                  <div><a href="">John Doe</a></div>
+                  <div>10 min ago</div>
+                  <div>
+                    <a href=""><i class="fas fa-arrow-up"></i></a> 10
+                    <a href=""><i class="fas fa-arrow-down"></i></a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h4 class="crew">Featured Crew</h4>
-            <div class="double-lines"></div>
-            <div class="director">
-              <div class="director-heading">Director</div>
-              <div class="item">Christopher Smith</div>
-            </div>
-            <h5 class="runtime"><i class="fas fa-hourglass-start"></i>99min</h5>
-            <h5 class="date-released">
-              <i class="far fa-clock"></i>February 2, 2010
-            </h5>
-            <a href="" class="btn"
-              ><i class="far fa-bookmark"></i> Want to see</a
-            >
-            <a href="" class="btn"><i class="far fa-star"></i> Add to Top 10</a>
           </div>
         </div>
-        <div class="reviews"></div>
       </section>
     </main>
 
