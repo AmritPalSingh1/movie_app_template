@@ -37,6 +37,13 @@ body {
   }
 }
 
+.double-lines {
+  border-top: 1px dotted $primary-color;
+  border-bottom: 1px dotted $primary-color;
+  height: 4px;
+  width: 100px;
+}
+
 h2 {
   font-size: 2rem;
   font-weight: 500;
@@ -151,7 +158,7 @@ header {
   .sticky {
     position: fixed;
     top: 0;
-    padding-top: 78.4px;
+    padding-top: 74px;
     width: 100%;
   }
 
@@ -194,7 +201,7 @@ header {
 }
 
 .fix-padding {
-  padding-top: 78.4px;
+  padding-top: 74px;
 }
 
 .dark-overlay {
@@ -364,8 +371,6 @@ header {
   padding-top: 5rem;
 
   .details {
-    display: flex;
-    display: -webkit-flex;
     width: 65%;
     .movie-image {
       img {
@@ -379,13 +384,6 @@ header {
         font-weight: 500;
         font-size: 1.4rem;
         margin: 0;
-      }
-
-      .double-lines {
-        border-top: 1px dotted $primary-color;
-        border-bottom: 1px dotted $primary-color;
-        height: 4px;
-        width: 100px;
       }
 
       .genre-list,
@@ -438,6 +436,66 @@ header {
 
       a {
         margin-top: 1rem;
+      }
+    }
+  }
+
+  .cast-section {
+    padding: 3rem 0;
+    .cast {
+      font-size: 1.8rem;
+      margin: 0;
+      padding-bottom: 0.6rem;
+    }
+
+    .actor-card {
+      width: 12.5rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      border-radius: 18px;
+
+      .actor-overlay {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 18px;
+
+        h3 {
+          font-size: 0.98rem;
+          font-weight: bold;
+          padding-top: 0.5rem;
+          padding-bottom: 1.5rem;
+          max-height: 4rem;
+        }
+
+        .actor-image {
+          img {
+            width: 128px;
+            height: 128px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+
+        .actor-role {
+          font-size: 0.9rem;
+          font-weight: 300;
+          padding-bottom: 1rem;
+        }
+
+        .actor-social {
+          padding-bottom: 0.4rem;
+
+          i {
+            margin: 0 0.5rem;
+            cursor: pointer;
+            @include easeOut-fast;
+
+            &:hover {
+              font-size: 1.3rem;
+            }
+          }
+        }
       }
     }
   }

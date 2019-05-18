@@ -28,6 +28,12 @@ body {
     background-color: #fff;
     color: #23b1ec; }
 
+.double-lines {
+  border-top: 1px dotted #23b1ec;
+  border-bottom: 1px dotted #23b1ec;
+  height: 4px;
+  width: 100px; }
+
 h2 {
   font-size: 2rem;
   font-weight: 500;
@@ -119,7 +125,7 @@ header .topbar {
 header .sticky {
   position: fixed;
   top: 0;
-  padding-top: 78.4px;
+  padding-top: 74px;
   width: 100%; }
 
 header .menu {
@@ -153,7 +159,7 @@ header .menu {
           color: #25262a; }
 
 .fix-padding {
-  padding-top: 78.4px; }
+  padding-top: 74px; }
 
 .dark-overlay {
   height: 100%;
@@ -264,8 +270,6 @@ header .menu {
 .movie-info {
   padding-top: 5rem; }
   .movie-info .details {
-    display: flex;
-    display: -webkit-flex;
     width: 65%; }
     .movie-info .details .movie-image img {
       height: 420px; }
@@ -275,11 +279,6 @@ header .menu {
         font-weight: 500;
         font-size: 1.4rem;
         margin: 0; }
-      .movie-info .details .full-details .double-lines {
-        border-top: 1px dotted #23b1ec;
-        border-bottom: 1px dotted #23b1ec;
-        height: 4px;
-        width: 100px; }
       .movie-info .details .full-details .genre-list,
       .movie-info .details .full-details .director {
         margin: 0.8rem 0;
@@ -321,6 +320,48 @@ header .menu {
         margin: 1rem 0; }
       .movie-info .details .full-details a {
         margin-top: 1rem; }
+  .movie-info .cast-section {
+    padding: 3rem 0; }
+    .movie-info .cast-section .cast {
+      font-size: 1.8rem;
+      margin: 0;
+      padding-bottom: 0.6rem; }
+    .movie-info .cast-section .actor-card {
+      width: 12.5rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      border-radius: 18px; }
+      .movie-info .cast-section .actor-card .actor-overlay {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 18px; }
+        .movie-info .cast-section .actor-card .actor-overlay h3 {
+          font-size: 0.98rem;
+          font-weight: bold;
+          padding-top: 0.5rem;
+          padding-bottom: 1.5rem;
+          max-height: 4rem; }
+        .movie-info .cast-section .actor-card .actor-overlay .actor-image img {
+          width: 128px;
+          height: 128px;
+          object-fit: cover;
+          border-radius: 50%; }
+        .movie-info .cast-section .actor-card .actor-overlay .actor-role {
+          font-size: 0.9rem;
+          font-weight: 300;
+          padding-bottom: 1rem; }
+        .movie-info .cast-section .actor-card .actor-overlay .actor-social {
+          padding-bottom: 0.4rem; }
+          .movie-info .cast-section .actor-card .actor-overlay .actor-social i {
+            margin: 0 0.5rem;
+            cursor: pointer;
+            transition: all 0.25s ease-out;
+            -webkit-transition: all 0.25s ease-out;
+            -moz-transition: all 0.25s ease-out;
+            -ms-transition: all 0.25s ease-out; }
+            .movie-info .cast-section .actor-card .actor-overlay .actor-social i:hover {
+              font-size: 1.3rem; }
   .movie-info .reviews {
     width: 35%;
     border: 1.2px solid #e8edf1; }
