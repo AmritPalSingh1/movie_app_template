@@ -13,6 +13,9 @@ body {
 .bg-white {
   background-color: #fff; }
 
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
 .btn {
   text-decoration: none;
   color: #fff;
@@ -326,12 +329,40 @@ header .menu {
       font-size: 1.8rem;
       margin: 0;
       padding-bottom: 0.6rem; }
+    .movie-info .cast-section .align-arrow-keys {
+      align-items: center; }
+    .movie-info .cast-section .fa-angle-left,
+    .movie-info .cast-section .fa-angle-right {
+      cursor: pointer;
+      position: absolute;
+      background-color: #25262a;
+      color: #fff;
+      font-size: 1.3rem;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .movie-info .cast-section .scrollmenu {
+      margin: 2rem 0;
+      margin-right: 1.3rem;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow: -moz-scrollbars-none; }
+    .movie-info .cast-section .scrollmenu {
+      overflow: -moz-scrollbars-none; }
+    .movie-info .cast-section .scrollmenu::-webkit-scrollbar {
+      height: 0;
+      width: 0; }
     .movie-info .cast-section .actor-card {
-      width: 12.5rem;
+      min-width: 12.5rem;
       background-size: cover;
       background-repeat: no-repeat;
       text-align: center;
-      border-radius: 18px; }
+      border-radius: 18px;
+      margin: 0.2rem 0.5rem; }
       .movie-info .cast-section .actor-card .actor-overlay {
         color: #fff;
         background-color: rgba(0, 0, 0, 0.5);
@@ -339,12 +370,13 @@ header .menu {
         .movie-info .cast-section .actor-card .actor-overlay h3 {
           font-size: 0.98rem;
           font-weight: bold;
-          padding-top: 0.5rem;
-          padding-bottom: 1.5rem;
-          max-height: 4rem; }
+          padding-top: 0.6rem;
+          padding-bottom: 1.9rem;
+          max-height: 4rem;
+          margin: 0; }
         .movie-info .cast-section .actor-card .actor-overlay .actor-image img {
-          width: 128px;
-          height: 128px;
+          width: 135px;
+          height: 135px;
           object-fit: cover;
           border-radius: 50%; }
         .movie-info .cast-section .actor-card .actor-overlay .actor-role {

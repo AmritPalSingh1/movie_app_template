@@ -21,6 +21,9 @@ body {
   background-color: #fff;
 }
 
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .btn {
   text-decoration: none;
   color: #fff;
@@ -448,12 +451,52 @@ header {
       padding-bottom: 0.6rem;
     }
 
+    .align-arrow-keys {
+      align-items: center;
+    }
+
+    .fa-angle-left,
+    .fa-angle-right {
+      cursor: pointer;
+      position: absolute;
+      background-color: $dark-color;
+      color: #fff;
+      font-size: 1.3rem;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      // display: none;
+    }
+
+    .scrollmenu {
+      margin: 2rem 0;
+      margin-right: 1.3rem;
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow: -moz-scrollbars-none;
+    }
+
+    .scrollmenu {
+      overflow: -moz-scrollbars-none;
+    }
+
+    .scrollmenu::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+    }
+
     .actor-card {
-      width: 12.5rem;
+      min-width: 12.5rem;
       background-size: cover;
       background-repeat: no-repeat;
       text-align: center;
       border-radius: 18px;
+      margin: 0.2rem 0.5rem;
 
       .actor-overlay {
         color: #fff;
@@ -463,15 +506,16 @@ header {
         h3 {
           font-size: 0.98rem;
           font-weight: bold;
-          padding-top: 0.5rem;
-          padding-bottom: 1.5rem;
+          padding-top: 0.6rem;
+          padding-bottom: 1.9rem;
           max-height: 4rem;
+          margin: 0;
         }
 
         .actor-image {
           img {
-            width: 128px;
-            height: 128px;
+            width: 135px;
+            height: 135px;
             object-fit: cover;
             border-radius: 50%;
           }
