@@ -3,6 +3,36 @@
     padding-right: 5rem;
     padding-left: 5rem;
   }
+
+  .movie-info {
+    & > .d-flex {
+      .details {
+        & > .d-flex {
+          flex-direction: column;
+        }
+
+        .movie-image {
+          display: none;
+        }
+        .full-details {
+          text-align: center;
+          .double-lines {
+            margin: auto !important;
+          }
+          .genre-list,
+          .director {
+            justify-content: center;
+          }
+        }
+      }
+
+      .reviews {
+        .reviews-body {
+          padding: 0 1rem !important;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -25,10 +55,42 @@
   .movie-bg {
     .d-flex {
       margin: 0 -2.5rem;
-      // flex-direction: column;
-      // .movie-details {
-      //   width: 100% !important;
-      // }
+    }
+  }
+
+  .movie-info {
+    & > .d-flex {
+      flex-direction: column;
+
+      .details {
+        & > .d-flex {
+          flex-direction: row;
+        }
+        width: 100%;
+
+        .movie-image {
+          display: block;
+        }
+
+        .full-details {
+          text-align: left;
+          .double-lines {
+            margin: 0 !important;
+          }
+          .genre-list,
+          .director {
+            justify-content: left;
+          }
+        }
+      }
+
+      .reviews {
+        width: 100%;
+
+        .reviews-body {
+          padding: 0 2.5rem !important;
+        }
+      }
     }
   }
 }
@@ -133,5 +195,54 @@
 
   .movie-bg {
     background-position: top;
+  }
+
+  .movie-info {
+    padding-top: 0rem;
+    & > .d-flex {
+      .details {
+        & > .d-flex {
+          flex-direction: column;
+        }
+
+        .movie-image {
+          text-align: center;
+          img {
+            height: 320px;
+          }
+        }
+        .full-details {
+          padding-top: 1.5rem;
+          text-align: center;
+          .double-lines {
+            margin: auto !important;
+          }
+          .genre-list,
+          .director {
+            justify-content: center;
+          }
+        }
+      }
+
+      .reviews {
+        .reviews-body {
+          padding: 0 1rem !important;
+        }
+      }
+    }
+    .cast-section {
+      .scrollmenu {
+        margin: 2rem 0;
+        margin-right: 0;
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow: -moz-scrollbars-none;
+      }
+      .fa-angle-left,
+      .fa-angle-right {
+        visibility: hidden;
+      }
+    }
   }
 }

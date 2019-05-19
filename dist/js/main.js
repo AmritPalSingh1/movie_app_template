@@ -116,8 +116,6 @@ function leftCursor() {
     leftArrow.style.display = "flex";
   }
   castList.scrollLeft = beforeScroll;
-
-  console.log("okka");
 }
 
 // Hide and display right cursor when needed
