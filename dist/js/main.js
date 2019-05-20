@@ -1,5 +1,4 @@
 const movieImage = document.querySelector("#movie-top-image");
-const movieDetails = document.querySelector(".movie-details");
 
 const castList = document.querySelector("#cast-list");
 
@@ -14,10 +13,12 @@ function loadEventListeners() {
   // remove and add arrows display
   setInterval(leftCursor, 100);
   setInterval(rightCursor, 100);
+  fixMovieBackground(); // Call listener function at run time
 }
 
 // fix background movie poster image size on device size change
-function fixMovieBackground(mobile) {
+function fixMovieBackground() {
+  let mobile = window.matchMedia("(max-width: 700px)");
   if (mobile.matches) {
     movieImage.style.backgroundSize =
       "700px " + movieDetails.offsetHeight + "px";
@@ -26,9 +27,11 @@ function fixMovieBackground(mobile) {
   }
 }
 
-var mobile = window.matchMedia("(max-width: 700px)");
-fixMovieBackground(mobile); // Call listener function at run time
-mobile.addListener(fixMovieBackground); // Attach listener function on state changes
+fixMovieBackground(); // Call listener function at run time
+
+
+window.addEventListener("resize", fixMovieBackground);
+
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {

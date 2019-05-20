@@ -214,7 +214,7 @@ header .menu {
         color: #f8f9fa;
         display: none; }
     .movie-bg .dark-overlay .d-flex .grade-movie {
-      align-self: center;
+      padding-top: 2.5rem;
       margin-left: auto;
       margin-right: auto;
       padding-bottom: 2rem; }
