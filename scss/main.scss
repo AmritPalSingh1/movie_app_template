@@ -221,6 +221,7 @@ header {
   -moz-background-size: cover;
   -ms-background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 
   .dark-overlay {
     padding: 1rem 2rem;
@@ -377,12 +378,14 @@ header {
     width: 65%;
     .movie-image {
       img {
-        height: 420px;
+        height: 450px;
       }
     }
 
     .full-details {
       padding: 0 2rem;
+      padding-right: 0.2rem;
+
       h4 {
         font-weight: 500;
         font-size: 1.4rem;
@@ -390,11 +393,18 @@ header {
       }
 
       .genre-list,
-      .director {
+      .crew-list {
         margin: 0.8rem 0;
         display: flex;
         -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
+
+        .crew-item{
+          display: flex;
+          -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
+
         .genre-item,
         .item {
           border: 1px solid $dark-color;
@@ -405,7 +415,7 @@ header {
           border-radius: 7px;
           box-shadow: 1px 1px;
         }
-        .director-heading {
+        .crew-heading {
           padding-top: 0.1rem;
           margin: 0.1rem;
           margin-right: 10px;

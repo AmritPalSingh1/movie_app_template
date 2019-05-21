@@ -176,7 +176,8 @@ header .menu {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -ms-background-size: cover;
-  background-position: center; }
+  background-position: center;
+  background-attachment: fixed; }
   .movie-bg .dark-overlay {
     padding: 1rem 2rem;
     text-align: center; }
@@ -276,23 +277,29 @@ header .menu {
   .movie-info .details {
     width: 65%; }
     .movie-info .details .movie-image img {
-      height: 420px; }
+      height: 450px; }
     .movie-info .details .full-details {
-      padding: 0 2rem; }
+      padding: 0 2rem;
+      padding-right: 0.2rem; }
       .movie-info .details .full-details h4 {
         font-weight: 500;
         font-size: 1.4rem;
         margin: 0; }
       .movie-info .details .full-details .genre-list,
-      .movie-info .details .full-details .director {
+      .movie-info .details .full-details .crew-list {
         margin: 0.8rem 0;
         display: flex;
         -webkit-flex-wrap: wrap;
         flex-wrap: wrap; }
+        .movie-info .details .full-details .genre-list .crew-item,
+        .movie-info .details .full-details .crew-list .crew-item {
+          display: flex;
+          -webkit-flex-wrap: wrap;
+          flex-wrap: wrap; }
         .movie-info .details .full-details .genre-list .genre-item,
         .movie-info .details .full-details .genre-list .item,
-        .movie-info .details .full-details .director .genre-item,
-        .movie-info .details .full-details .director .item {
+        .movie-info .details .full-details .crew-list .genre-item,
+        .movie-info .details .full-details .crew-list .item {
           border: 1px solid #25262a;
           color: #25262a;
           font-weight: 300;
@@ -300,8 +307,8 @@ header .menu {
           margin: 0.1rem;
           border-radius: 7px;
           box-shadow: 1px 1px; }
-        .movie-info .details .full-details .genre-list .director-heading,
-        .movie-info .details .full-details .director .director-heading {
+        .movie-info .details .full-details .genre-list .crew-heading,
+        .movie-info .details .full-details .crew-list .crew-heading {
           padding-top: 0.1rem;
           margin: 0.1rem;
           margin-right: 10px;
@@ -510,45 +517,47 @@ header .menu {
     padding-left: 0.5rem; }
   .topbar-flex-container .right {
     font-size: 0.9rem; }
-  .movie-bg .dark-overlay {
-    padding: 0; }
-    .movie-bg .dark-overlay .container {
+  .movie-bg {
+    background-attachment: unset; }
+    .movie-bg .dark-overlay {
       padding: 0; }
-  .movie-bg .d-flex {
-    margin: 0;
-    flex-direction: column; }
-    .movie-bg .d-flex .movie-details {
-      width: 100% !important;
-      padding-right: 1rem;
-      padding-left: 1rem;
-      text-align: left !important; }
-      .movie-bg .d-flex .movie-details h2 {
-        padding: 2rem 0 1rem 0 !important;
-        margin-bottom: 0 !important; }
-      .movie-bg .d-flex .movie-details p {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-        padding-bottom: 6rem; }
-      .movie-bg .d-flex .movie-details .grade-with-movie {
-        display: inline !important; }
-      .movie-bg .d-flex .movie-details h3 {
-        padding-top: 1rem;
-        padding-bottom: 4rem !important;
-        display: none !important; }
-    .movie-bg .d-flex .grade-movie {
-      padding: 2rem 2rem;
-      padding-bottom: 4rem !important;
-      width: 100% !important;
-      color: #25262a;
-      background-color: #fff;
-      margin-top: -3rem; }
-      .movie-bg .d-flex .grade-movie .grade-box {
+      .movie-bg .dark-overlay .container {
+        padding: 0; }
+    .movie-bg .d-flex {
+      margin: 0;
+      flex-direction: column; }
+      .movie-bg .d-flex .movie-details {
         width: 100% !important;
-        background-color: #25262a !important; }
-        .movie-bg .d-flex .grade-movie .grade-box .width-animation.active {
-          width: 100% !important; }
-        .movie-bg .d-flex .grade-movie .grade-box:hover .width-animation {
-          width: 100% !important; }
+        padding-right: 1rem;
+        padding-left: 1rem;
+        text-align: left !important; }
+        .movie-bg .d-flex .movie-details h2 {
+          padding: 2rem 0 1rem 0 !important;
+          margin-bottom: 0 !important; }
+          .movie-bg .d-flex .movie-details h2 .grade-with-movie {
+            display: inline !important; }
+        .movie-bg .d-flex .movie-details p {
+          margin-top: 0 !important;
+          padding-top: 0 !important;
+          padding-bottom: 6rem; }
+        .movie-bg .d-flex .movie-details h3 {
+          padding-top: 1rem;
+          padding-bottom: 4rem !important;
+          display: none !important; }
+      .movie-bg .d-flex .grade-movie {
+        padding: 2rem 2rem;
+        padding-bottom: 4rem !important;
+        width: 100% !important;
+        color: #25262a;
+        background-color: #fff;
+        margin-top: -3rem; }
+        .movie-bg .d-flex .grade-movie .grade-box {
+          width: 100% !important;
+          background-color: #25262a !important; }
+          .movie-bg .d-flex .grade-movie .grade-box .width-animation.active {
+            width: 100% !important; }
+          .movie-bg .d-flex .grade-movie .grade-box:hover .width-animation {
+            width: 100% !important; }
   .movie-bg {
     background-position: top; }
   .movie-info {
@@ -561,6 +570,8 @@ header .menu {
         height: 320px; }
     .movie-info > .d-flex .details .full-details {
       padding-top: 1.5rem;
+      padding-left: 0;
+      padding-right: 0;
       text-align: center; }
       .movie-info > .d-flex .details .full-details .double-lines {
         margin: auto !important; }

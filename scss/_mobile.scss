@@ -129,7 +129,8 @@
   }
 
   .movie-bg {
-    .dark-overlay {
+  background-attachment: unset;
+  .dark-overlay {
       padding: 0;
       .container {
         padding: 0;
@@ -148,6 +149,9 @@
         h2 {
           padding: 2rem 0 1rem 0 !important;
           margin-bottom: 0 !important;
+          .grade-with-movie {
+            display: inline !important;
+          }
         }
         p {
           margin-top: 0 !important;
@@ -155,9 +159,7 @@
           padding-bottom: 6rem;
         }
 
-        .grade-with-movie {
-          display: inline !important;
-        }
+        
         h3 {
           padding-top: 1rem;
           padding-bottom: 4rem !important;
@@ -213,6 +215,8 @@
         }
         .full-details {
           padding-top: 1.5rem;
+          padding-left: 0;
+          padding-right: 0;
           text-align: center;
           .double-lines {
             margin: auto !important;
