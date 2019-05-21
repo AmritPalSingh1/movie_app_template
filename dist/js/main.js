@@ -1,7 +1,5 @@
 const movieImage = document.querySelector("#movie-top-image");
 
-const castList = document.querySelector("#cast-list");
-
 const leftArrow = document.querySelector("#left-arrow");
 const rightArrow = document.querySelector("#right-arrow");
 

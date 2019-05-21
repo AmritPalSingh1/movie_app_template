@@ -11,6 +11,7 @@ const movieTime = document.getElementById('movie-time');
 const releaseDate = document.getElementById('release-date');
 const genreList = document.getElementById('genre-list');
 const crewList = document.getElementById('crew-list');
+const castList = document.getElementById('cast-list');
 
 
 
@@ -103,8 +104,104 @@ tmdb.getMovie(movieID)
           crewList.appendChild(crewItem);
         }
       }
-      console.log(directorsOrWriters);
 
+      // Add cast members to cast list
+      const castArray = data.movieCredits.cast;
+
+      while(castArray.length > 10){
+        castArray.pop();
+      }
+
+      castArray.forEach(function(actor){
+        const actorDiv = document.createElement("div");
+        actorDiv.className = "actor-card";
+
+        tmdb.getActorData(actor.id)
+          .then(actorData => {
+            const randomNumber = Math.floor(Math.random() * actorData.actorCredits.cast.length);
+            actorDiv.style.backgroundImage = `url("https://image.tmdb.org/t/p/w300_and_h450_bestv2/${actorData.actorCredits.cast[randomNumber].poster_path}")`;
+          })
+        
+        const socialContainer = document.createElement("div");
+        const social = document.createElement("div");
+
+        social.className = "actor-social";
+        socialContainer.appendChild(social);
+        console.log(socialContainer.innerHTML);
+      
+        tmdb.getActorSocial(actor.id)
+          .then(actorSocial => {
+            const allSocial = actorSocial.actorSocial;
+            console.log(allSocial);
+
+            if (allSocial.twitter_id != null){
+              const socialLink = document.createElement("a");
+              socialLink.href = "https://twitter.com/" + allSocial.twitter_id;
+              socialLink.style.marginRight = "0.8rem";
+              socialLink.style.color = "#fff";
+              socialLink.setAttribute('target', '_blank');
+              let twitter = document.createElement("i");
+              twitter.className = "fab fa-twitter";
+
+              socialLink.appendChild(twitter);
+              social.appendChild(socialLink);
+            }
+            if (allSocial.facebook_id != null){
+              const socialLink = document.createElement("a");
+              socialLink.href = "https://facebook.com/" + allSocial.facebook_id;
+              socialLink.style.marginRight = "0.8rem";
+              socialLink.style.color = "#fff";
+              socialLink.setAttribute('target', '_blank');
+              let facebook = document.createElement("i");
+              facebook.className = "fab fa-facebook";
+
+              socialLink.appendChild(facebook);
+              social.appendChild(socialLink);
+            }
+            if (allSocial.instagram_id != null){
+              const socialLink = document.createElement("a");
+              socialLink.href = "https://instagram.com/" + allSocial.instagram_id;
+              socialLink.style.marginRight = "0.8rem";
+              socialLink.style.color = "#fff";
+              socialLink.setAttribute('target', '_blank');
+              let instagram = document.createElement("i");
+              instagram.className = "fab fa-instagram";
+
+              socialLink.appendChild(instagram);
+              social.appendChild(socialLink);
+            }
+            if (allSocial.imdb_id != null){
+              const socialLink = document.createElement("a");
+              socialLink.href = "https://imdb.com/name/" + allSocial.imdb_id;
+              socialLink.style.marginRight = "0.8rem";
+              socialLink.style.color = "#fff";
+              socialLink.setAttribute('target', '_blank');
+              let imdb = document.createElement("i");
+              imdb.className = "fab fa-imdb";
+
+              socialLink.appendChild(imdb);
+              social.appendChild(socialLink);
+            }
+
+            actorDiv.innerHTML = `
+              <div class="actor-overlay">
+                <h3>${actor.name}</h3>
+                <div class="actor-image">
+                  <img
+                    src="https://image.tmdb.org/t/p/w138_and_h175_face/${actor.profile_path}"
+                    alt=""
+                  />
+                </div>
+                <div class="actor-role">${actor.character}</div>
+                ${social.innerHTML}
+              </div>
+            `;
+
+            castList.appendChild(actorDiv);
+          })
+
+
+      });
 
     }
   })
