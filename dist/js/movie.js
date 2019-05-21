@@ -1,5 +1,5 @@
 // Init Tmdb
-const tmdb = new Tmdb
+const tmdb = new Tmdb;
 
 // Initialize dom variables
 const movieName = document.getElementById('movie-name');
