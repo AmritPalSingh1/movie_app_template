@@ -18,7 +18,7 @@ const castList = document.getElementById('cast-list');
 // set movie id
 const movieID = 64690;
 
-// 447404 8 9 126 339846 307081 118
+// 447404 8 9 126 339846 307081 118 64690 420817
 
 // Make http call
 tmdb.getMovie(movieID)
@@ -27,7 +27,6 @@ tmdb.getMovie(movieID)
       // Movie not found
     }
     else{
-      console.log(data.movie);
       movieName.innerHTML = data.movie.title
       if (data.movie.overview != ''){
         description.innerHTML = data.movie.overview;
@@ -51,8 +50,9 @@ tmdb.getMovie(movieID)
       movieTime.innerHTML = data.movie.runtime;
       
       // Add movie release date
+
       
-      let uglyDate = new Date(data.movie.release_date);
+      let uglyDate = new Date(data.movie.release_date + "T12:00:00Z");
       let month = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"][uglyDate.getMonth()];
       let goodDate = month + ' ' + uglyDate.getDate() + ', ' + uglyDate.getFullYear();
@@ -80,7 +80,6 @@ tmdb.getMovie(movieID)
       for(let i = 0; i < directorsOrWriters.length; i++){
         for (let j = i+1; j < directorsOrWriters.length; j++){
           if (directorsOrWriters[i].name == directorsOrWriters[j].name && directorsOrWriters[i].name != ''){
-            console.log(directorsOrWriters[i]);
             directorsOrWriters[i].job = "Director, Writer"
             directorsOrWriters[j].name = "";
           }
@@ -115,6 +114,7 @@ tmdb.getMovie(movieID)
       castArray.forEach(function(actor){
         const actorDiv = document.createElement("div");
         actorDiv.className = "actor-card";
+        actorDiv.style.backgroundColor = "#222";
 
         tmdb.getActorData(actor.id)
           .then(actorData => {
@@ -127,12 +127,10 @@ tmdb.getMovie(movieID)
 
         social.className = "actor-social";
         socialContainer.appendChild(social);
-        console.log(socialContainer.innerHTML);
       
         tmdb.getActorSocial(actor.id)
           .then(actorSocial => {
             const allSocial = actorSocial.actorSocial;
-            console.log(allSocial);
 
             if (allSocial.twitter_id != null){
               const socialLink = document.createElement("a");

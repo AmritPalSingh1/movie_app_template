@@ -541,16 +541,6 @@ header {
 
         .actor-social {
           padding-bottom: 0.4rem;
-
-          // i {
-          //   margin: 0 0.5rem;
-          //   cursor: pointer;
-          //   @include easeOut-fast;
-
-          //   &:hover {
-          //     font-size: 1.3rem;
-          //   }
-          // }
         }
       }
     }
@@ -622,4 +612,5 @@ header {
   }
 }
 
+@import "movies";
 @import "mobile";

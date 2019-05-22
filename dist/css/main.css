@@ -442,6 +442,78 @@ header .menu {
             .movie-info .reviews .reviews-body .review .review-details a:hover {
               color: #23b1ec; }
 
+main {
+  background-color: #25262a; }
+
+.search-section {
+  background-color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid #25262a; }
+
+.search-box {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 2.9rem;
+  overflow: hidden;
+  border: 1.5px solid;
+  border-color: #e8edf1;
+  border-radius: 22px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 5px 0 rgba(0, 0, 0, 0.19); }
+  .search-box:hover .search-symbol {
+    color: #23b1ec; }
+  .search-box input {
+    color: #25262a;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    padding-right: 45px;
+    padding-left: 25px;
+    border: none;
+    overflow: visible;
+    outline: 0; }
+    .search-box input:focus + button {
+      color: #23b1ec; }
+  .search-box .search-symbol {
+    width: 45px;
+    height: 100%;
+    color: #222;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background: 0 0;
+    outline: 0;
+    transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out; }
+    .search-box .search-symbol:hover {
+      color: #23b1ec; }
+
+.movies-body {
+  background-color: #25262a;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e5eff6;
+  max-width: 1000px;
+  margin-top: -3rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .movies-body .movies-nav .d-flex div {
+    flex: 1;
+    text-align: center;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem; }
+
 @media (max-width: 1200px) {
   .container {
     padding-right: 5rem;
