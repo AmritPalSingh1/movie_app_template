@@ -1,12 +1,7 @@
-main {
-  background-color: $dark-color;
-}
-
 .search-section {
   background-color: #fff;
   padding-top: 2rem;
-  padding-bottom: 6rem;
-  border-bottom: 1px solid $dark-color;
+  padding-bottom: 5.5rem;
 }
 
 .search-box {
@@ -77,19 +72,53 @@ main {
   color: #fff;
 
   border-radius: 5px;
-  border: 1px solid $light-blue;
 
   max-width: 1000px;
-  margin-top: -3rem;
+  margin-top: -2.5rem;
   margin-left: auto;
   margin-right: auto;
   .movies-nav {
     .d-flex {
-      div {
+      .movies-link {
         flex: 1;
         text-align: center;
         padding-top: 0.7rem;
         padding-bottom: 0.7rem;
+        @include easeOut-fast;
+
+        &.popular {
+          border-bottom: 2px solid $primary-color;
+
+          border-top-left-radius: 5px;
+        }
+        &.name {
+          border-bottom: 2px solid #f9cc41;
+        }
+        &.top-rated {
+          border-bottom: 2px solid #19be29;
+        }
+        &.upcoming {
+          border-bottom: 2px solid violet;
+          border-top-right-radius: 5px;
+        }
+        &.active {
+          border-bottom-width: 8px;
+          // background-color: #fff;
+          border-top: 1px solid $dark-color;
+          border-left: 1px solid $dark-color;
+          border-right: 1px solid $dark-color;
+          // color: $dark-color;
+        }
+
+        &:hover {
+          cursor: pointer;
+          border-bottom-width: 8px;
+          background-color: #fff;
+          border-top: 1px solid $dark-color;
+          border-left: 1px solid $dark-color;
+          border-right: 1px solid $dark-color;
+          color: $dark-color;
+        }
       }
     }
   }

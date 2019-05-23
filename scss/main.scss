@@ -21,6 +21,10 @@ body {
   background-color: #fff;
 }
 
+.bg-dark {
+  background-color: $dark-color;
+}
+
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -399,7 +403,7 @@ header {
         -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
 
-        .crew-item{
+        .crew-item {
           display: flex;
           -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -512,7 +516,7 @@ header {
         color: #fff;
         background-color: rgba(0, 0, 0, 0.6);
         height: 100%;
-        
+
         border-radius: 18px;
 
         h3 {

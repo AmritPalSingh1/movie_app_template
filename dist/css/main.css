@@ -13,6 +13,9 @@ body {
 .bg-white {
   background-color: #fff; }
 
+.bg-dark {
+  background-color: #25262a; }
+
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
@@ -442,14 +445,10 @@ header .menu {
             .movie-info .reviews .reviews-body .review .review-details a:hover {
               color: #23b1ec; }
 
-main {
-  background-color: #25262a; }
-
 .search-section {
   background-color: #fff;
   padding-top: 2rem;
-  padding-bottom: 6rem;
-  border-bottom: 1px solid #25262a; }
+  padding-bottom: 5.5rem; }
 
 .search-box {
   position: relative;
@@ -503,16 +502,42 @@ main {
   background-color: #25262a;
   color: #fff;
   border-radius: 5px;
-  border: 1px solid #e5eff6;
   max-width: 1000px;
-  margin-top: -3rem;
+  margin-top: -2.5rem;
   margin-left: auto;
   margin-right: auto; }
-  .movies-body .movies-nav .d-flex div {
+  .movies-body .movies-nav .d-flex .movies-link {
     flex: 1;
     text-align: center;
     padding-top: 0.7rem;
-    padding-bottom: 0.7rem; }
+    padding-bottom: 0.7rem;
+    transition: all 0.25s ease-out;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    -ms-transition: all 0.25s ease-out; }
+    .movies-body .movies-nav .d-flex .movies-link.popular {
+      border-bottom: 2px solid #23b1ec;
+      border-top-left-radius: 5px; }
+    .movies-body .movies-nav .d-flex .movies-link.name {
+      border-bottom: 2px solid #f9cc41; }
+    .movies-body .movies-nav .d-flex .movies-link.top-rated {
+      border-bottom: 2px solid #19be29; }
+    .movies-body .movies-nav .d-flex .movies-link.upcoming {
+      border-bottom: 2px solid violet;
+      border-top-right-radius: 5px; }
+    .movies-body .movies-nav .d-flex .movies-link.active {
+      border-bottom-width: 8px;
+      border-top: 1px solid #25262a;
+      border-left: 1px solid #25262a;
+      border-right: 1px solid #25262a; }
+    .movies-body .movies-nav .d-flex .movies-link:hover {
+      cursor: pointer;
+      border-bottom-width: 8px;
+      background-color: #fff;
+      border-top: 1px solid #25262a;
+      border-left: 1px solid #25262a;
+      border-right: 1px solid #25262a;
+      color: #25262a; }
 
 @media (max-width: 1200px) {
   .container {
