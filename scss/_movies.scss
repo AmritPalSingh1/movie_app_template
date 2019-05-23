@@ -103,11 +103,11 @@
         }
         &.active {
           border-bottom-width: 8px;
-          // background-color: #fff;
+          background-color: #fff;
           border-top: 1px solid $dark-color;
           border-left: 1px solid $dark-color;
           border-right: 1px solid $dark-color;
-          // color: $dark-color;
+          color: $dark-color;
         }
 
         &:hover {
@@ -120,6 +120,43 @@
           color: $dark-color;
         }
       }
+    }
+  }
+}
+
+.movies-content {
+  padding: 4rem 0;
+
+  .movie-card {
+    margin: 0 1rem;
+    width: 200px;
+
+    .movie-poster {
+      width: 200px;
+      height: 300px;
+      position: relative;
+      img {
+        width: 200px;
+        height: 300px;
+      }
+
+      .movie-grade {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0.4rem 0.8rem;
+        background-color: $primary-color;
+        font-weight: bold;
+      }
+    }
+
+    .movie-name {
+      margin-top: 0.6rem;
+      padding-left: 0.2rem;
+      max-height: 4.8rem;
+      overflow: hidden;
+      line-height: 1.4;
+      font-weight: 300;
     }
   }
 }

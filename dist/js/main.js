@@ -21,15 +21,13 @@ function fixMovieBackground() {
     movieImage.style.backgroundSize =
       "700px " + movieDetails.offsetHeight + "px";
   } else {
-    movieImage.style.backgroundSize = "cover";
+    if (movieImage != null) movieImage.style.backgroundSize = "cover";
   }
 }
 
 fixMovieBackground(); // Call listener function at run time
 
-
 window.addEventListener("resize", fixMovieBackground);
-
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {
@@ -61,21 +59,25 @@ positionArrows();
 window.onresize = positionArrows;
 
 function positionArrows() {
-  // Position left arrow
-  leftArrow.style.left = castList.offsetLeft - 15 + "px";
-  leftArrow.style.top =
-    castList.offsetTop + castList.offsetHeight / 2 - 25 + "px";
+  if (castList != null) {
+    // Position left arrow
+    leftArrow.style.left = castList.offsetLeft - 15 + "px";
+    leftArrow.style.top =
+      castList.offsetTop + castList.offsetHeight / 2 - 25 + "px";
 
-  // Position right arrow
-  rightArrow.style.top =
-    castList.offsetTop + castList.offsetHeight / 2 - 25 + "px";
-  rightArrow.style.left =
-    castList.offsetLeft + castList.offsetWidth - 20 + "px";
+    // Position right arrow
+    rightArrow.style.top =
+      castList.offsetTop + castList.offsetHeight / 2 - 25 + "px";
+    rightArrow.style.left =
+      castList.offsetLeft + castList.offsetWidth - 20 + "px";
+  }
 }
 
-// Scroll events
-leftArrow.addEventListener("click", scrollLeft);
-rightArrow.addEventListener("click", scrollRight);
+if (leftArrow != null) {
+  // Scroll events
+  leftArrow.addEventListener("click", scrollLeft);
+  rightArrow.addEventListener("click", scrollRight);
+}
 
 // Controlling left movement
 function scrollLeft(e) {
@@ -109,24 +111,28 @@ function moveRight() {
 
 // Hide and display left cursor when needed
 function leftCursor() {
-  let beforeScroll = castList.scrollLeft;
-  castList.scrollLeft -= 1;
-  if (beforeScroll == castList.scrollLeft) {
-    leftArrow.style.display = "none";
-  } else {
-    leftArrow.style.display = "flex";
+  if (castList != null) {
+    let beforeScroll = castList.scrollLeft;
+    castList.scrollLeft -= 1;
+    if (beforeScroll == castList.scrollLeft) {
+      leftArrow.style.display = "none";
+    } else {
+      leftArrow.style.display = "flex";
+    }
+    castList.scrollLeft = beforeScroll;
   }
-  castList.scrollLeft = beforeScroll;
 }
 
 // Hide and display right cursor when needed
 function rightCursor() {
-  let beforeScroll = castList.scrollLeft;
-  castList.scrollLeft += 1;
-  if (beforeScroll == castList.scrollLeft) {
-    rightArrow.style.display = "none";
-  } else {
-    rightArrow.style.display = "flex";
+  if (castList != null) {
+    let beforeScroll = castList.scrollLeft;
+    castList.scrollLeft += 1;
+    if (beforeScroll == castList.scrollLeft) {
+      rightArrow.style.display = "none";
+    } else {
+      rightArrow.style.display = "flex";
+    }
+    castList.scrollLeft = beforeScroll;
   }
-  castList.scrollLeft = beforeScroll;
 }
