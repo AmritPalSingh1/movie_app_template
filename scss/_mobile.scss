@@ -129,8 +129,8 @@
   }
 
   .movie-bg {
-  background-attachment: unset;
-  .dark-overlay {
+    background-attachment: unset;
+    .dark-overlay {
       padding: 0;
       .container {
         padding: 0;
@@ -159,7 +159,6 @@
           padding-bottom: 6rem;
         }
 
-        
         h3 {
           padding-top: 1rem;
           padding-bottom: 4rem !important;
@@ -209,8 +208,9 @@
 
         .movie-image {
           text-align: center;
+          height: 320px;
           img {
-            height: 320px;
+            height: 100%;
           }
         }
         .full-details {

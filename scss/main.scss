@@ -77,7 +77,7 @@ p {
 
 header {
   .topbar {
-    padding: 1.7rem 0;
+    padding: 1.5rem 0 1.2rem 0;
 
     .topbar-flex-container {
       display: flex;
@@ -140,6 +140,9 @@ header {
       }
       .middle {
         text-align: center;
+        img {
+          height: 80px;
+        }
       }
       .right {
         text-align: right;
@@ -381,8 +384,11 @@ header {
   .details {
     width: 65%;
     .movie-image {
+      height: 450px;
       img {
-        height: 450px;
+        height: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
       }
     }
 
@@ -518,6 +524,7 @@ header {
         height: 100%;
 
         border-radius: 18px;
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.7);
 
         h3 {
           font-size: 0.98rem;

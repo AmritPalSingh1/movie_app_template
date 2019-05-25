@@ -61,7 +61,7 @@ p {
   display: -webkit-flex; }
 
 header .topbar {
-  padding: 1.7rem 0; }
+  padding: 1.5rem 0 1.2rem 0; }
   header .topbar .topbar-flex-container {
     display: flex;
     display: -webkit-flex;
@@ -112,6 +112,8 @@ header .topbar {
             color: #23b1ec; }
     header .topbar .topbar-flex-container .middle {
       text-align: center; }
+      header .topbar .topbar-flex-container .middle img {
+        height: 80px; }
     header .topbar .topbar-flex-container .right {
       text-align: right; }
       header .topbar .topbar-flex-container .right a {
@@ -279,8 +281,11 @@ header .menu {
   padding-top: 5rem; }
   .movie-info .details {
     width: 65%; }
-    .movie-info .details .movie-image img {
+    .movie-info .details .movie-image {
       height: 450px; }
+      .movie-info .details .movie-image img {
+        height: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
     .movie-info .details .full-details {
       padding: 0 2rem;
       padding-right: 0.2rem; }
@@ -379,7 +384,8 @@ header .menu {
         color: #fff;
         background-color: rgba(0, 0, 0, 0.6);
         height: 100%;
-        border-radius: 18px; }
+        border-radius: 18px;
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.7); }
         .movie-info .cast-section .actor-card .actor-overlay h3 {
           font-size: 0.98rem;
           font-weight: bold;
@@ -683,9 +689,10 @@ header .menu {
     .movie-info > .d-flex .details > .d-flex {
       flex-direction: column; }
     .movie-info > .d-flex .details .movie-image {
-      text-align: center; }
+      text-align: center;
+      height: 320px; }
       .movie-info > .d-flex .details .movie-image img {
-        height: 320px; }
+        height: 100%; }
     .movie-info > .d-flex .details .full-details {
       padding-top: 1.5rem;
       padding-left: 0;
