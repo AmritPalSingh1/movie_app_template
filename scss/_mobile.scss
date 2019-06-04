@@ -36,6 +36,13 @@
 }
 
 @media (max-width: 992px) {
+
+  header{
+    .topbar {
+      padding: 1rem 0 0.9rem 0;
+    }
+
+  }
   .container {
     padding-right: 3rem;
     padding-left: 3rem;
@@ -49,6 +56,10 @@
     .middle {
       text-align: left !important;
       padding-left: 1.5rem;
+    }
+
+    #mo-logo{
+      height: 60px;
     }
   }
 
@@ -93,6 +104,18 @@
       }
     }
   }
+
+  
+}
+
+@media (max-width: 850px){
+  .movies-content{
+    .movie-card{
+      width: 33.3%;
+    }
+  }
+
+  
 }
 
 @media (max-width: 700px) {
@@ -126,6 +149,21 @@
     .right {
       font-size: 0.9rem;
     }
+  }
+
+  header{
+
+    .sticky {
+      padding-top: 60px;
+    }
+
+    .menu{
+      padding: 1rem 0;
+    }
+  }
+
+  .fix-padding {
+    padding-top: 60px;
   }
 
   .movie-bg {
@@ -249,4 +287,18 @@
       }
     }
   }
+
+  
+  .movies-body{
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 650px){
+  .movies-content{
+    .movie-card{
+      width: 50%;
+    }
+  }
+  
 }

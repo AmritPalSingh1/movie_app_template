@@ -73,6 +73,7 @@ p {
 .d-flex {
   display: flex;
   display: -webkit-flex;
+  display: -ms-flexbox;
 }
 
 header {

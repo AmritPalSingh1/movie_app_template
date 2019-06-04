@@ -18,8 +18,11 @@ function loadEventListeners() {
 function fixMovieBackground() {
   let mobile = window.matchMedia("(max-width: 700px)");
   if (mobile.matches) {
-    movieImage.style.backgroundSize =
+    if (movieImage != null){
+      movieImage.style.backgroundSize =
       "700px " + movieDetails.offsetHeight + "px";
+
+    }
   } else {
     if (movieImage != null) movieImage.style.backgroundSize = "cover";
   }
