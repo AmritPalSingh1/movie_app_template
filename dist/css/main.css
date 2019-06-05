@@ -456,6 +456,23 @@ header .menu {
   background-color: #fff;
   padding: 2rem 0.5rem 5.5rem 0.5rem; }
 
+.search-results-box {
+  max-width: 590px;
+  margin: auto;
+  position: relative;
+  color: #25262a; }
+  .search-results-box .search-results {
+    position: absolute;
+    display: block;
+    width: 100%;
+    z-index: 1;
+    padding: 0 1rem; }
+    .search-results-box .search-results .shadow {
+      background-color: #fff; }
+  .search-results-box .result {
+    padding: 0.3rem;
+    border: 1px solid #e5eff6; }
+
 .search-box {
   position: relative;
   max-width: 600px;

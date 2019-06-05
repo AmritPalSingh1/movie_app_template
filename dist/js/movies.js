@@ -4,21 +4,45 @@ const tmdb = new Tmdb();
 // Initialize DOM variables
 const moviesSearch = document.getElementById('movies-search');
 const popularNav = document.getElementById('popular-nav');
-const nameNav = document.getElementById('name-nav');
+const latestNav = document.getElementById('latest-nav');
 const topNav = document.getElementById('top-nav');
 const upcomingNav = document.getElementById('upcoming-nav');
 const moviesContainer = document.getElementById('movies-container');
+const resultsList = document.getElementById('results-list');
 
 let page = 1;
 
-nameNav.addEventListener('click', namesList);
+latestNav.addEventListener('click', latestList);
 topNav.addEventListener('click', topRatedList);
 upcomingNav.addEventListener('click', upcomingList);
 popularNav.addEventListener('click', popularList);
 
+popularList();
+
+// Dropdown results while searching effect
+moviesSearch.addEventListener('keyup', showDropdown);
+
+function showDropdown(){
+  query = moviesSearch.value;
+
+  resultsList.innerHTML = "";
+
+  tmdb.searchMovies(query).then(data => {
+    results = data.searchMovies.results;
+
+    results.forEach(function(result){
+      const div = document.createElement('div');
+      div.className = "result";
+      div.innerHTML = result.title + " (" + result.release_date.substring(0, 4) + ")";
+      resultsList.appendChild(div);
+    });
+      
+  });
+}
+
 function removeMiniNavActive(){
   popularNav.classList.remove("active");
-  nameNav.classList.remove("active");
+  latestNav.classList.remove("active");
   topNav.classList.remove("active");
   upcomingNav.classList.remove("active");
 }
@@ -32,7 +56,6 @@ function newMoviesList(movies){
     movies.forEach(function(movie){
       const movieCard = document.createElement("div");
       movieCard.className = "movie-card";
-      
       movieCard.innerHTML = `
       <a href="">
       <div class="movie-poster">
@@ -84,33 +107,48 @@ function addMovies(movies){
   }
 }
 
-tmdb.getPopularMovies(1).then(data => {
-  popularMoviesResult = data.popularMovies.results;
-
-  newMoviesList(popularMoviesResult);
-
-});
-
-// tmdb.getPopularMovies(2).then(data => {
-//   popularMoviesResult = data.popularMovies.results;
-
-//   addMovies(popularMoviesResult);
-
-// });
-
 function popularList(){
   removeMiniNavActive();
   popularNav.classList.add("active");
+
+  tmdb.getPopularMovies(1).then(data => {
+    popularMoviesResult = data.popularMovies.results;
+  
+    newMoviesList(popularMoviesResult);
+  
+  });
 }
-function namesList(){
+
+function latestList(){
   removeMiniNavActive();
-  nameNav.classList.add("active");
+  latestNav.classList.add("active");
+
+  tmdb.getLatestMovies(1).then(data => {
+    latestMoviesResult = data.latestMovies.results;
+  
+    newMoviesList(latestMoviesResult);
+  
+  });
 }
 function topRatedList(){
   removeMiniNavActive();
   topNav.classList.add("active");
+
+  tmdb.getTopRatedMovies(1).then(data => {
+    topRatedMoviesResult = data.topMovies.results;
+  
+    newMoviesList(topRatedMoviesResult);
+  
+  });
 }
 function upcomingList(){
   removeMiniNavActive();
   upcomingNav.classList.add("active");
+
+  tmdb.getUpcomingMovies(1).then(data => {
+    upcomingMoviesResult = data.upcomingMovies.results;
+  
+    newMoviesList(upcomingMoviesResult);
+  
+  });
 }
