@@ -1,6 +1,3 @@
-// Init Tmdb
-const tmdb = new Tmdb();
-
 // Initialize dom variables
 const movieName = document.getElementById("movie-name");
 const description = document.getElementById("description");
@@ -16,7 +13,7 @@ const castList = document.getElementById("cast-list");
 // set movie id
 const movieID = 64690;
 
-// 447404 8 9 126 339846 307081 118 64690 420817
+// sample movie ids ==> 447404 8 9 126 339846 307081 118 64690 420817
 
 // Make http call
 tmdb.getMovie(movieID).then(data => {

@@ -99,6 +99,7 @@
           <div class="search-box">
             <input
               type="text"
+              id="movies-search"
               class="search"
               placeholder="Search movies, people ..."
             />
@@ -111,139 +112,21 @@
         <div class="movies-body">
           <div class="movies-nav">
             <div class="d-flex">
-              <div class="movies-link popular active">Popular</div>
-              <div class="movies-link name">Name (A-Z)</div>
-              <div class="movies-link top-rated">Top Rated</div>
-              <div class="movies-link upcoming">Upcoming</div>
+              <div id="popular-nav" class="movies-link popular active">Popular</div>
+              <div id="name-nav" class="movies-link name">Name (A-Z)</div>
+              <div id="top-nav" class="movies-link top-rated">Top Rated</div>
+              <div id="upcoming-nav" class="movies-link upcoming">Upcoming</div>
             </div>
           </div>
           <div class="movies-content">
-            <div class="d-flex">
-              <div class="movie-card">
-                <div class="movie-poster">
-                  <img
-                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg"
-                    alt=""
-                  />
-                  <div class="movie-grade">
-                    B
-                  </div>
-                </div>
-                <div class="movie-name">
-                 hello
-                </div>
-              </div>
-              <div class="movie-card">
-                <div class="movie-poster">
-                  <img
-                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg"
-                    alt=""
-                  />
-                  <div class="movie-grade">
-                    B
-                  </div>
-                </div>
-                <div class="movie-name">
-                 Dr. Strangelove or: How I Learned to Stop   Worrying and Love the
-                 Bomb (2019)
-                </div>
-              </div>
-              <div class="movie-card">
-                <div class="movie-poster">
-                  <img
-                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg"
-                    alt=""
-                  />
-                  <div class="movie-grade">
-                    B
-                  </div>
-                </div>
-                <div class="movie-name">
-                 Dr. Strangelove or: How I Learned to Stop   Worrying and Love the
-                 Bomb (2019)
-                </div>
-              </div>
-              <div class="movie-card">
-                <div class="movie-poster">
-                  <img
-                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg"
-                    alt=""
-                  />
-                  <div class="movie-grade">
-                    B
-                  </div>
-                </div>
-                <div class="movie-name">
-                 Dr. Strangelove or: How I Learned to Stop   Worrying and Love the
-                 Bomb (2019)
-                </div>
-              </div>
-              <div class="movie-card">
-                <div class="movie-poster">
-                  <img
-                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg"
-                    alt=""
-                  />
-                  <div class="movie-grade">
-                    B
-                  </div>
-                </div>
-                <div class="movie-name">
-                 Dr. Strangelove or: How I Learned to Stop   Worrying and Love the
-                 Bomb (2019)
-                </div>
-              </div>
-              <div class="movie-card">
-                <div class="movie-poster">
-                  <img
-                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg"
-                    alt=""
-                  />
-                  <div class="movie-grade">
-                    B
-                  </div>
-                </div>
-                <div class="movie-name">
-                 Dr. Strangelove or: How I Learned to Stop   Worrying and Love the
-                 Bomb (2019)
-                </div>
-              </div>
-              <div class="movie-card">
-                <div class="movie-poster">
-                  <img
-                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg"
-                    alt=""
-                  />
-                  <div class="movie-grade">
-                    B
-                  </div>
-                </div>
-                <div class="movie-name">
-                 Dr. Strangelove or: How I Learned to Stop   Worrying and Love the
-                 Bomb (2019)
-                </div>
-              </div>
-              <div class="movie-card">
-                <div class="movie-poster">
-                  <img
-                  src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg"
-                    alt=""
-                  />
-                  <div class="movie-grade">
-                    B
-                  </div>
-                </div>
-                <div class="movie-name">
-                 Dr. Strangelove or: How I Learned to Stop   Worrying and Love the
-                 Bomb (2019)
-                </div>
-              </div>
+            <div class="d-flex" id="movies-container">
             </div>
           </div>
         </div>
       </div>
     </main>
     <script src="./js/tmdb.js"></script>
+    <script src="./js/movies.js"></script>
     <script src="./js/movie.js"></script>
     <script src="./js/main.js"></script>
   </body>

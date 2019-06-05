@@ -558,6 +558,9 @@ header .menu {
   .movies-content .movie-card {
     width: 25%;
     padding-bottom: 1.5rem; }
+    .movies-content .movie-card a {
+      text-decoration: none;
+      color: #fff; }
     .movies-content .movie-card .movie-poster {
       margin: auto;
       width: 90%;
