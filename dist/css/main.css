@@ -16,6 +16,9 @@ body {
 .bg-dark {
   background-color: #25262a; }
 
+.cursor-pointer {
+  cursor: pointer; }
+
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
@@ -469,9 +472,15 @@ header .menu {
     padding: 0 1rem; }
     .search-results-box .search-results .shadow {
       background-color: #fff; }
+  .search-results-box a {
+    text-decoration: none;
+    color: #25262a; }
   .search-results-box .result {
     padding: 0.3rem;
-    border: 1px solid #e5eff6; }
+    border: 1px solid #e5eff6;
+    cursor: pointer; }
+    .search-results-box .result:hover {
+      background-color: #e5eff6; }
 
 .search-box {
   position: relative;

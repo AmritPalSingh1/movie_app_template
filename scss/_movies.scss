@@ -22,9 +22,20 @@
     }
   }
 
+  a{
+    text-decoration: none;
+    color: $dark-color;
+
+  }
+  
   .result{
     padding: 0.3rem;
     border: 1px solid $light-blue;
+    cursor: pointer;
+
+    &:hover{
+      background-color: $light-blue;
+    }
   }
 }
 

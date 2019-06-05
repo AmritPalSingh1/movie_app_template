@@ -9,35 +9,71 @@ const topNav = document.getElementById('top-nav');
 const upcomingNav = document.getElementById('upcoming-nav');
 const moviesContainer = document.getElementById('movies-container');
 const resultsList = document.getElementById('results-list');
+const moviesSearchBtn = document.getElementById('movies-search-btn');
 
+// Current results
 let page = 1;
+
+// moviesSearch.value = "";
 
 latestNav.addEventListener('click', latestList);
 topNav.addEventListener('click', topRatedList);
 upcomingNav.addEventListener('click', upcomingList);
 popularNav.addEventListener('click', popularList);
+moviesSearchBtn.addEventListener('click', showSearchMovies);
 
 popularList();
 
 // Dropdown results while searching effect
 moviesSearch.addEventListener('keyup', showDropdown);
 
-function showDropdown(){
+function showDropdown(e){
   query = moviesSearch.value;
 
   resultsList.innerHTML = "";
 
-  tmdb.searchMovies(query).then(data => {
+  if (e.code == "Enter"){
+    showSearchMovies();
+  }
+  else{
+
+    
+    tmdb.searchMovies(query).then(data => {
+      resultsList.innerHTML = "";
     results = data.searchMovies.results;
 
-    results.forEach(function(result){
-      const div = document.createElement('div');
-      div.className = "result";
-      div.innerHTML = result.title + " (" + result.release_date.substring(0, 4) + ")";
-      resultsList.appendChild(div);
-    });
+    if (results != undefined){
+      results.forEach(function(result){
+        const a = document.createElement('a');
+        a.href = "movie.html";
+        
+        const div = document.createElement('div');
+        div.className = "result cursor-pointer";
+        div.innerHTML = result.title + " (" + result.release_date.substring(0, 4) + ")";
+        a.appendChild(div);
+        resultsList.appendChild(a);
+      });
       
+    }
   });
+}
+}
+
+// Show movies searched using manual input
+function showSearchMovies(){
+  query = moviesSearch.value;
+  resultsList.innerHTML = "";
+
+  tmdb.searchMovies(query).then(data => {
+    resultsList.innerHTML = "";
+    results = data.searchMovies.results;
+
+    if (results != undefined){
+      newMoviesList(results);
+      removeMiniNavActive()
+    }
+  });
+
 }
 
 function removeMiniNavActive(){
@@ -57,7 +93,7 @@ function newMoviesList(movies){
       const movieCard = document.createElement("div");
       movieCard.className = "movie-card";
       movieCard.innerHTML = `
-      <a href="">
+      <a href="movie.html">
       <div class="movie-poster">
       <img
       src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}" class="shadow"
@@ -74,6 +110,7 @@ function newMoviesList(movies){
       `;
       
       moviesContainer.appendChild(movieCard);
+
     });
   }
 }
