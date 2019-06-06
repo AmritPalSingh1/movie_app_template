@@ -14,6 +14,7 @@ const loadMore = document.querySelector('.load-more');
 
 // Current results page number
 let upcomingPage = 0;
+let latestPage = 0;
 let popularPage = 0;
 let customPage = 0;
 let topPage = 0;
@@ -74,13 +75,18 @@ function showSearchMovies(){
   query = moviesSearch.value;
   if (query != ""){
     resultsList.innerHTML = "";
+    resetPageNumbers();
+    customPage = 1;
     tmdb.searchMovies(query, customPage).then(data => {
       resultsList.innerHTML = "";
       results = data.searchMovies.results;
       
       if (results != undefined){
         newMoviesList(results);
-        removeMiniNavActive()
+        removeMiniNavActive();
+      }
+      else{
+        resetPageNumbers();
       }
     });
   }
@@ -89,6 +95,7 @@ function showSearchMovies(){
 // Load more movies when load more button is clicked
 function loadMoreMovies(){
   if (popularPage > 0){
+    popularPage++;
     tmdb.getPopularMovies(popularPage).then(data => {
       popularMoviesResult = data.popularMovies.results;
     
@@ -96,6 +103,42 @@ function loadMoreMovies(){
     
     });
   }
+  else if (latestPage > 0){
+    latestPage++;
+    tmdb.getLatestMovies(latestPage).then(data => {
+      latestMoviesResult = data.latestMovies.results;
+      addMovies(latestMoviesResult);
+    });
+  }
+  else if(topPage > 0){
+    topPage++;
+    tmdb.getTopRatedMovies(topPage).then(data => {
+      topRatedMoviesResult = data.topMovies.results;
+      addMovies(topRatedMoviesResult);
+    });
+  }
+  else if(upcomingPage > 0){
+    upcomingPage++;
+    tmdb.getUpcomingMovies(upcomingPage).then(data => {
+      upcomingMoviesResult = data.upcomingMovies.results;
+      addMovies(upcomingMoviesResult);
+    });
+  }
+  else if (customPage > 0){
+    customPage++;
+    tmdb.searchMovies(query, customPage).then(data => {
+      resultsList.innerHTML = "";
+      results = data.searchMovies.results;
+      if (results != undefined){
+        addMovies(results);
+      }
+    });
+  }
+  console.log("Popular " + popularPage);
+  console.log("latest " + latestPage);
+  console.log("top " + topPage);
+  console.log("upcoming " + upcomingPage);
+  console.log("custom " + customPage);
 }
 
 function removeMiniNavActive(){
@@ -108,6 +151,14 @@ function removeMiniNavActive(){
   catch{
     // Do nothing
   }
+}
+
+function resetPageNumbers(){
+  popularPage = 0;
+  latestPage = 0;
+  topPage = 0;
+  upcomingPage = 0;
+  customPage = 0;
 }
 
 // Remove all existing movies and add new ones
@@ -150,7 +201,7 @@ function addMovies(movies){
       movieCard.className = "movie-card";
       
       movieCard.innerHTML = `
-      <a href="">
+      <a href="movie.html">
       <div class="movie-poster">
       <img
       src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}" class="shadow"
@@ -173,7 +224,8 @@ function addMovies(movies){
 
 function popularList(){
   removeMiniNavActive();
-  popularPage++;
+  resetPageNumbers();
+  popularPage = 1;
 
   try{
     popularNav.classList.add("active");
@@ -192,7 +244,9 @@ function popularList(){
 
 function latestList(){
   removeMiniNavActive();
+  resetPageNumbers();
   latestNav.classList.add("active");
+  latestPage = 1;
 
   tmdb.getLatestMovies(1).then(data => {
     latestMoviesResult = data.latestMovies.results;
@@ -203,7 +257,9 @@ function latestList(){
 }
 function topRatedList(){
   removeMiniNavActive();
+  resetPageNumbers();
   topNav.classList.add("active");
+  topPage = 1;
 
   tmdb.getTopRatedMovies(1).then(data => {
     topRatedMoviesResult = data.topMovies.results;
@@ -214,9 +270,11 @@ function topRatedList(){
 }
 function upcomingList(){
   removeMiniNavActive();
+  resetPageNumbers();
   upcomingNav.classList.add("active");
+  upcomingPage = 1;
 
-  tmdb.getUpcomingMovies().then(data => {
+  tmdb.getUpcomingMovies(1).then(data => {
     upcomingMoviesResult = data.upcomingMovies.results;
   
     newMoviesList(upcomingMoviesResult);
