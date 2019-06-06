@@ -10,22 +10,32 @@ const upcomingNav = document.getElementById('upcoming-nav');
 const moviesContainer = document.getElementById('movies-container');
 const resultsList = document.getElementById('results-list');
 const moviesSearchBtn = document.getElementById('movies-search-btn');
+const loadMore = document.querySelector('.load-more');
 
-// Current results
-let page = 1;
+// Current results page number
+let upcomingPage = 0;
+let popularPage = 0;
+let customPage = 0;
+let topPage = 0;
 
-// moviesSearch.value = "";
-
-latestNav.addEventListener('click', latestList);
-topNav.addEventListener('click', topRatedList);
-upcomingNav.addEventListener('click', upcomingList);
-popularNav.addEventListener('click', popularList);
-moviesSearchBtn.addEventListener('click', showSearchMovies);
+try{
+  latestNav.addEventListener('click', latestList);
+  topNav.addEventListener('click', topRatedList);
+  upcomingNav.addEventListener('click', upcomingList);
+  popularNav.addEventListener('click', popularList);
+  moviesSearchBtn.addEventListener('click', showSearchMovies);
+  loadMore.addEventListener('click', loadMoreMovies);
+}
+catch{
+  // Do nothing
+}
 
 popularList();
 
 // Dropdown results while searching effect
-moviesSearch.addEventListener('keyup', showDropdown);
+if (moviesSearch != null){
+  moviesSearch.addEventListener('keyup', showDropdown);
+}
 
 function showDropdown(e){
   query = moviesSearch.value;
@@ -38,7 +48,7 @@ function showDropdown(e){
   else{
 
     
-    tmdb.searchMovies(query).then(data => {
+    tmdb.searchMovies(query, 1).then(data => {
       resultsList.innerHTML = "";
     results = data.searchMovies.results;
 
@@ -62,25 +72,42 @@ function showDropdown(e){
 // Show movies searched using manual input
 function showSearchMovies(){
   query = moviesSearch.value;
-  resultsList.innerHTML = "";
-
-  tmdb.searchMovies(query).then(data => {
+  if (query != ""){
     resultsList.innerHTML = "";
-    results = data.searchMovies.results;
+    tmdb.searchMovies(query, customPage).then(data => {
+      resultsList.innerHTML = "";
+      results = data.searchMovies.results;
+      
+      if (results != undefined){
+        newMoviesList(results);
+        removeMiniNavActive()
+      }
+    });
+  }
+}
 
-    if (results != undefined){
-      newMoviesList(results);
-      removeMiniNavActive()
-    }
-  });
-
+// Load more movies when load more button is clicked
+function loadMoreMovies(){
+  if (popularPage > 0){
+    tmdb.getPopularMovies(popularPage).then(data => {
+      popularMoviesResult = data.popularMovies.results;
+    
+      addMovies(popularMoviesResult);
+    
+    });
+  }
 }
 
 function removeMiniNavActive(){
-  popularNav.classList.remove("active");
-  latestNav.classList.remove("active");
-  topNav.classList.remove("active");
-  upcomingNav.classList.remove("active");
+  try{
+    popularNav.classList.remove("active");
+    latestNav.classList.remove("active");
+    topNav.classList.remove("active");
+    upcomingNav.classList.remove("active");
+  }
+  catch{
+    // Do nothing
+  }
 }
 
 // Remove all existing movies and add new ones
@@ -146,7 +173,14 @@ function addMovies(movies){
 
 function popularList(){
   removeMiniNavActive();
-  popularNav.classList.add("active");
+  popularPage++;
+
+  try{
+    popularNav.classList.add("active");
+  }
+  catch{
+    // Do nothing
+  }
 
   tmdb.getPopularMovies(1).then(data => {
     popularMoviesResult = data.popularMovies.results;
@@ -182,7 +216,7 @@ function upcomingList(){
   removeMiniNavActive();
   upcomingNav.classList.add("active");
 
-  tmdb.getUpcomingMovies(1).then(data => {
+  tmdb.getUpcomingMovies().then(data => {
     upcomingMoviesResult = data.upcomingMovies.results;
   
     newMoviesList(upcomingMoviesResult);

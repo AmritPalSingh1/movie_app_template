@@ -16,6 +16,9 @@ body {
 .bg-dark {
   background-color: #25262a; }
 
+.text-center {
+  text-align: center; }
+
 .cursor-pointer {
   cursor: pointer; }
 
@@ -612,6 +615,22 @@ header .menu {
       width: 90%;
       margin: auto; }
 
+.load-more {
+  background: none;
+  border: 1px solid #23b1ec;
+  color: #23b1ec;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out; }
+  .load-more i {
+    margin-left: 0.5rem; }
+  .load-more:hover {
+    background-color: #23b1ec;
+    color: #fff; }
+
 @media (max-width: 1200px) {
   .container {
     padding-right: 5rem;
@@ -767,7 +786,7 @@ header .menu {
     .movie-info .cast-section .fa-angle-left,
     .movie-info .cast-section .fa-angle-right {
       visibility: hidden; }
-  .movies-body {
+  .movies-body .movies-nav {
     font-size: 0.8rem; } }
 
 @media (max-width: 650px) {
