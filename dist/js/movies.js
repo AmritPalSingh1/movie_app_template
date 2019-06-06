@@ -18,6 +18,7 @@ let latestPage = 0;
 let popularPage = 0;
 let customPage = 0;
 let topPage = 0;
+let totalPages = 100;
 
 try{
   latestNav.addEventListener('click', latestList);
@@ -50,7 +51,7 @@ function showDropdown(e){
 
     
     tmdb.searchMovies(query, 1).then(data => {
-      resultsList.innerHTML = "";
+    resultsList.innerHTML = "";
     results = data.searchMovies.results;
 
     if (results != undefined){
@@ -80,7 +81,8 @@ function showSearchMovies(){
     tmdb.searchMovies(query, customPage).then(data => {
       resultsList.innerHTML = "";
       results = data.searchMovies.results;
-      
+      totalPages = data.searchMovies.total_pages;
+
       if (results != undefined){
         newMoviesList(results);
         removeMiniNavActive();
@@ -88,6 +90,8 @@ function showSearchMovies(){
       else{
         resetPageNumbers();
       }
+
+      loadMore.style.display = (totalPages > 1) ? 'inline' : 'none';
     });
   }
 }
@@ -134,11 +138,10 @@ function loadMoreMovies(){
       }
     });
   }
-  console.log("Popular " + popularPage);
-  console.log("latest " + latestPage);
-  console.log("top " + topPage);
-  console.log("upcoming " + upcomingPage);
-  console.log("custom " + customPage);
+
+  if (customPage >= totalPages || upcomingPage >= totalPages || topPage >= totalPages || popularPage >= totalPages || latestPage >= totalPages){
+    loadMore.style.display = "none";
+  }
 }
 
 function removeMiniNavActive(){
@@ -236,10 +239,10 @@ function popularList(){
 
   tmdb.getPopularMovies(1).then(data => {
     popularMoviesResult = data.popularMovies.results;
-  
+    totalPages = data.popularMovies.total_pages;  
     newMoviesList(popularMoviesResult);
-  
   });
+  loadMore.style.display = (totalPages > 1) ? 'inline' : 'none';  
 }
 
 function latestList(){
@@ -250,11 +253,12 @@ function latestList(){
 
   tmdb.getLatestMovies(1).then(data => {
     latestMoviesResult = data.latestMovies.results;
-  
-    newMoviesList(latestMoviesResult);
-  
+    totalPages = data.latestMovies.total_pages;  
+    newMoviesList(latestMoviesResult); 
   });
+  loadMore.style.display = (totalPages > 1) ? 'inline' : 'none';  
 }
+
 function topRatedList(){
   removeMiniNavActive();
   resetPageNumbers();
@@ -263,10 +267,10 @@ function topRatedList(){
 
   tmdb.getTopRatedMovies(1).then(data => {
     topRatedMoviesResult = data.topMovies.results;
-  
+    totalPages = data.topMovies.total_pages;
     newMoviesList(topRatedMoviesResult);
-  
   });
+  loadMore.style.display = (totalPages > 1) ? 'inline' : 'none';  
 }
 function upcomingList(){
   removeMiniNavActive();
@@ -276,8 +280,8 @@ function upcomingList(){
 
   tmdb.getUpcomingMovies(1).then(data => {
     upcomingMoviesResult = data.upcomingMovies.results;
-  
-    newMoviesList(upcomingMoviesResult);
-  
+    totalPages = data.upcomingMovies.total_pages;
+    newMoviesList(upcomingMoviesResult);  
   });
+  loadMore.style.display = (totalPages > 1) ? 'inline' : 'none';  
 }
