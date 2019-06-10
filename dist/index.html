@@ -24,64 +24,163 @@
     <title>Your Top Movies | Home</title>
   </head>
   <body>
-    <header>
-      <div class="topbar">
-        <div class="container">
-          <div class="topbar-flex-container">
-            <div class="left">
-              <div class="search">
-                <input type="text" name="search" placeholder="Search..." />
-                <button class="search-symbol">
-                  <i class="fas fa-search"></i>
-                </button>
+      <header>
+          <div class="topbar">
+            <div class="container">
+              <div class="topbar-flex-container">
+                <div class="left">
+                  <div class="search">
+                    <input type="text" name="search" placeholder="Search..." />
+                    <button class="search-symbol">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="middle">
+                  <img id="mo-logo" src="img/logo1.png" alt="Movies Overflow" />
+                </div>
+                <div class="right">
+                  <a href="">Sign Up <i class="fas fa-user-plus"></i></a>
+                  <a href="">Sign In <i class="fas fa-sign-in-alt"></i></a>
+                </div>
               </div>
             </div>
-            <div class="middle">
-              <img src="img/logo1.png" alt="Movies Overflow" />
+          </div>
+    
+          <!-- Navbar -->
+          <nav class="menu sticky-top">
+            <ul class="menu-nav">
+              <li class="nav-link">
+                <a href="index.html" class="active"
+                  ><i class="fas fa-home nav-icon"></i>
+                  <span class="nav-item"> Home</span></a
+                >
+              </li>
+              <li class="nav-link">
+                <a href=""
+                  ><i class="fas fa-user-circle nav-icon"></i>
+                  <span class="nav-item"> John Doe</span></a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="movies.html" 
+                  ><i class="fas fa-search nav-icon"></i>
+                  <span class="nav-item"> Movies</span></a
+                >
+              </li>
+              <li class="nav-link">
+                <a href=""
+                  ><i class="far fa-question-circle nav-icon"></i>
+                  <span class="nav-item"> Discussion</span></a
+                >
+              </li>
+              <li class="nav-link">
+                <a href=""
+                  ><i class="far fa-bell nav-icon"></i>
+                  <span class="nav-item"> Notifications</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+        </header>
+    
+    <main class="home">
+      <div class="container">
+        <div class="d-flex">
+          <div class="feed">
+            <div class="post shadow">
+              <div class="post-head">
+                <div class="d-flex">
+                  <div class="votes shadow">
+                    <div class="arrows">
+                        <i class="fas fa-arrow-up"></i>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="total">
+                      10
+                    </div>
+                  </div>
+                  <div class="name-time">
+                    <div class="name">
+                      John Doe
+                    </div>
+                    <div class="time">
+                      <small><i class="fas fa-clock"></i> 3 hours ago</small>
+                    </div>
+                  </div>
+                  <div class="dots">
+                      <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="post-body">
+                <div class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quaerat non reprehenderit ut odit explicabo eos perspiciatis consequatur nihil neque nemo perferendis animi facere enim suscipit, tempore porro consequuntur culpa.
+                </div>
+              </div> 
+              <div class="post-tail">
+                <div class="show-comments">
+                   <span><i class="fas fa-comments"></i> Comments 15</span> 
+                </div>
+                <div class="add-comment">
+                  <input class="comment" type="text" placeholder="Add comment...">
+                  <button>Post</button>
+                </div>
+              </div>             
             </div>
-            <div class="right">
-              <a href="">Sign Up <i class="fas fa-user-plus"></i></a>
-              <a href="">Sign In <i class="fas fa-sign-in-alt"></i></a>
+            <div class="post shadow">
+              <div class="post-head">
+                <div class="d-flex">
+                  <div class="votes shadow">
+                    <div class="arrows">
+                        <i class="fas fa-arrow-up"></i>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="total">
+                      10
+                    </div>
+                  </div>
+                  <div class="name-time">
+                    <div class="name">
+                      John Doe
+                    </div>
+                    <div class="time">
+                      <small><i class="fas fa-clock"></i> 3 hours ago</small>
+                    </div>
+                  </div>
+                  <div class="dots">
+                      <i class="fas fa-ellipsis-v"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="post-body">
+                <div class="poster">
+                  <img src="https://image.tmdb.org/t/p/w1280/phxiKFDvPeQj4AbkvJLmuZEieDU.jpg" alt="">
+                </div>
+                <div class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quaerat non reprehenderit ut odit explicabo eos perspiciatis consequatur nihil neque nemo perferendis animi facere enim suscipit, tempore porro consequuntur culpa.
+                </div>
+              </div> 
+              <div class="post-tail">
+                <div class="show-comments">
+                   <span><i class="fas fa-comments"></i> Comments 15</span> 
+                </div>
+                <div class="add-comment">
+                  <input class="comment" type="text" placeholder="Add comment...">
+                  <button>Post</button>
+                </div>
+              </div>             
             </div>
+          </div>
+          <div class="sidebar">
+
           </div>
         </div>
       </div>
-
-      <!-- Navbar -->
-      <nav class="menu">
-        <ul class="menu-nav">
-          <li class="nav-link">
-            <a href="" class="active"
-              ><i class="fas fa-home nav-icon"></i>
-              <span class="nav-item"> Home</span></a
-            >
-          </li>
-          <li class="nav-link">
-            <a href=""
-              ><i class="fas fa-user-circle nav-icon"></i>
-              <span class="nav-item"> John Doe</span></a
-            >
-          </li>
-          <li class="nav-link">
-            <a href=""
-              ><i class="fas fa-search nav-icon"></i>
-              <span class="nav-item"> Discover</span></a
-            >
-          </li>
-          <li class="nav-link">
-            <a href=""
-              ><i class="far fa-question-circle nav-icon"></i>
-              <span class="nav-item"> Discussion</span></a
-            >
-          </li>
-          <li class="nav-link">
-            <a href=""
-              ><i class="far fa-bell nav-icon"></i>
-              <span class="nav-item"> Notifications</span></a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+    </main>
+    <script src="./js/tmdb.js"></script>
+    <script src="./js/movies.js"></script>
+    <script src="./js/movie.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

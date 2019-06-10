@@ -20,6 +20,8 @@ let customPage = 0;
 let topPage = 0;
 let totalPages = 100;
 
+let customQuery = "";
+
 try{
   latestNav.addEventListener('click', latestList);
   topNav.addEventListener('click', topRatedList);
@@ -76,6 +78,7 @@ function showSearchMovies(){
   query = moviesSearch.value;
   if (query != ""){
     resultsList.innerHTML = "";
+    customQuery = query;
     resetPageNumbers();
     customPage = 1;
     tmdb.searchMovies(query, customPage).then(data => {
@@ -130,7 +133,7 @@ function loadMoreMovies(){
   }
   else if (customPage > 0){
     customPage++;
-    tmdb.searchMovies(query, customPage).then(data => {
+    tmdb.searchMovies(customQuery, customPage).then(data => {
       resultsList.innerHTML = "";
       results = data.searchMovies.results;
       if (results != undefined){

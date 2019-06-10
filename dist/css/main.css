@@ -458,6 +458,79 @@ header .menu {
             .movie-info .reviews .reviews-body .review .review-details a:hover {
               color: #23b1ec; }
 
+.home {
+  height: 100vh; }
+  .home .container {
+    padding-top: 2rem; }
+    .home .container .d-flex .feed {
+      width: 70%; }
+      .home .container .d-flex .feed .post {
+        margin: 0rem 1.5rem 2rem 1.5rem;
+        border: 1px solid #e5eff6; }
+        .home .container .d-flex .feed .post .post-head {
+          padding: 0.5rem 0; }
+          .home .container .d-flex .feed .post .post-head .d-flex {
+            align-items: center; }
+          .home .container .d-flex .feed .post .post-head .votes {
+            margin-left: 0.5rem;
+            background-color: #25262a;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-weight: bold;
+            justify-content: center; }
+            .home .container .d-flex .feed .post .post-head .votes .arrows {
+              display: flex;
+              flex-direction: column; }
+              .home .container .d-flex .feed .post .post-head .votes .arrows :first-child {
+                margin-bottom: 0.5rem; }
+          .home .container .d-flex .feed .post .post-head .name-time {
+            margin-left: 1rem; }
+            .home .container .d-flex .feed .post .post-head .name-time .name {
+              margin-bottom: 0; }
+            .home .container .d-flex .feed .post .post-head .name-time .time {
+              color: #777; }
+          .home .container .d-flex .feed .post .post-head .dots {
+            margin-left: auto;
+            margin-right: 1rem; }
+        .home .container .d-flex .feed .post .post-body .text {
+          padding: 1rem 2rem;
+          font-weight: 300; }
+        .home .container .d-flex .feed .post .post-body .poster img {
+          width: 100%; }
+        .home .container .d-flex .feed .post .post-tail .show-comments {
+          padding: 0.3rem 1rem;
+          color: #777; }
+          .home .container .d-flex .feed .post .post-tail .show-comments span {
+            cursor: pointer;
+            font-size: 0.9rem; }
+        .home .container .d-flex .feed .post .post-tail .add-comment {
+          border-top: 1px solid #e5eff6;
+          display: flex; }
+          .home .container .d-flex .feed .post .post-tail .add-comment .comment {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            border: none; }
+            .home .container .d-flex .feed .post .post-tail .add-comment .comment:focus {
+              outline: none; }
+          .home .container .d-flex .feed .post .post-tail .add-comment button {
+            background-color: #fff;
+            border: none;
+            padding-right: 1rem;
+            color: #23b1ec;
+            margin-left: auto; }
+            .home .container .d-flex .feed .post .post-tail .add-comment button:hover {
+              cursor: pointer; }
+            .home .container .d-flex .feed .post .post-tail .add-comment button:focus {
+              outline: none; }
+    .home .container .d-flex .sidebar {
+      width: 30%;
+      background-color: yellow; }
+
 .search-section {
   background-color: #fff;
   padding: 2rem 0.5rem 5.5rem 0.5rem; }
