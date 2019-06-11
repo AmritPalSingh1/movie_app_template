@@ -144,23 +144,49 @@
 
               
             }
-            .filter{
-              margin: 0;
+            .filter-posts{
+              display: flex;
+              align-items: center;
               padding: 0.5rem;
-              .filter-posts{
-                display: flex;
-                align-items: center;
-                i{
-                  margin: 0 0.2rem;
-                }
-                .fa-sort-down{
-                  padding-bottom: 0.3rem;
-                  margin-left: auto;
-                }
+
+              i{
+                margin: 0 0.2rem;
+              }
+              .fa-sort-down{
+                padding-bottom: 0.3rem;
+                margin-left: auto;
               }
 
+              cursor: pointer;
+              @include easeOut-fast;
+              &:hover{
+                color: $primary-color;
+              }
+            }
+
+            .content-relative{
+              position: relative;
+            }
+            .filter{
+              width: 100%;
+              margin: 0;
+              position: absolute;
+              height: 0;
+              opacity: 0;
+              @include easeOut;
+
+              
               li{
                 display: none;
+                background-color: rgba(255, 255, 255, 0.95);
+            }
+
+              &.show{
+                height: auto;
+                opacity: 1;
+                li{
+                  display: block;
+                }
               }
             }
 
@@ -226,6 +252,7 @@
   .menu-nav {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
     .nav-link {
       padding: 0.2rem !important;

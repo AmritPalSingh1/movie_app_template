@@ -177,14 +177,16 @@
               <div class="heading">
                 Show Results For
               </div>
-              <ul class="filter">
-                <li class="filter-posts"><i class="fas fa-filter"></i> Filter Posts <i class="fas fa-sort-down"></i></li>
-                <li class="active">All</li>
-                <li>Latest</li>
-                <li>Top (Past Week)</li>
-                <li>Top (Past Month)</li>
-                <li>Top (All Time)</li>
-              </ul>
+              <div class="filter-posts"><i class="fas fa-filter"></i> Filter Posts <i class="fas fa-sort-down"></i></div>
+              <div class="content-relative">
+                <ul class="filter" id="filter-options">            
+                  <li class="active">All</li>
+                  <li>Latest</li>
+                  <li>Top (Past Week)</li>
+                  <li>Top (Past Month)</li>
+                  <li>Top (All Time)</li>
+                </ul>
+              </div>
             </div>
             <div class="suggested">
               <div class="heading">
@@ -236,6 +238,7 @@
         </div>
       </div>
     </main>
+    <script src="./js/home.js"></script>
     <script src="./js/tmdb.js"></script>
     <script src="./js/movies.js"></script>
     <script src="./js/movie.js"></script>
