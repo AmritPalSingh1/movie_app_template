@@ -157,6 +157,10 @@ header .menu {
       display: inline;
       padding: 1.2rem;
       padding-bottom: 0; }
+      header .menu .menu-nav .nav-link .fa-pen {
+        border: 1px solid #fff;
+        padding: 0.4rem;
+        border-radius: 50%; }
       header .menu .menu-nav .nav-link a {
         text-decoration: none;
         text-transform: uppercase;
@@ -173,6 +177,8 @@ header .menu {
           border-bottom: 1.3px solid #25262a; }
         header .menu .menu-nav .nav-link a:hover {
           color: #25262a; }
+          header .menu .menu-nav .nav-link a:hover .fa-pen {
+            border: 1px solid #25262a; }
 
 .fix-padding {
   padding-top: 74px; }
@@ -550,6 +556,42 @@ header .menu {
         .home .container .d-flex .sidebar .sort .filter .active {
           background-color: #e5eff6;
           font-weight: 400; }
+      .home .container .d-flex .sidebar .suggested .heading {
+        border-bottom: 1px solid #e5eff6;
+        font-weight: bold; }
+      .home .container .d-flex .sidebar .suggested .suggestions .suggestion {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0; }
+        .home .container .d-flex .sidebar .suggested .suggestions .suggestion .avi {
+          width: 50px;
+          height: 50px; }
+          .home .container .d-flex .sidebar .suggested .suggestions .suggestion .avi img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%; }
+        .home .container .d-flex .sidebar .suggested .suggestions .suggestion .username {
+          margin-left: 0.5rem; }
+          .home .container .d-flex .sidebar .suggested .suggestions .suggestion .username a {
+            text-decoration: none;
+            color: #25262a; }
+        .home .container .d-flex .sidebar .suggested .suggestions .suggestion .follow {
+          margin-left: auto; }
+          .home .container .d-flex .sidebar .suggested .suggestions .suggestion .follow button {
+            background-color: #23b1ec;
+            border: none;
+            color: #fff;
+            padding: 0.4rem;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 1px solid #23b1ec;
+            transition: all 0.25s ease-out;
+            -webkit-transition: all 0.25s ease-out;
+            -moz-transition: all 0.25s ease-out;
+            -ms-transition: all 0.25s ease-out; }
+            .home .container .d-flex .sidebar .suggested .suggestions .suggestion .follow button:hover {
+              background-color: #fff;
+              color: #23b1ec; }
 
 .search-section {
   background-color: #fff;
@@ -790,7 +832,7 @@ header .menu {
     display: flex;
     justify-content: space-around; }
     .menu-nav .nav-link {
-      padding: 0 !important; }
+      padding: 0.2rem !important; }
       .menu-nav .nav-link .nav-icon {
         font-size: 1.33rem; }
     .menu-nav .nav-item {
@@ -804,7 +846,7 @@ header .menu {
   header .menu {
     padding: 1rem 0; }
   .fix-padding {
-    padding-top: 60px; }
+    padding-top: 65px !important; }
   .movie-bg {
     background-attachment: unset; }
     .movie-bg .dark-overlay {

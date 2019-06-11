@@ -245,7 +245,9 @@ function popularList(){
     totalPages = data.popularMovies.total_pages;  
     newMoviesList(popularMoviesResult);
   });
-  loadMore.style.display = (totalPages > 1) ? 'inline' : 'none';  
+  if (loadMore != null){
+    loadMore.style.display = (totalPages > 1) ? 'inline' : 'none';  
+  }
 }
 
 function latestList(){
