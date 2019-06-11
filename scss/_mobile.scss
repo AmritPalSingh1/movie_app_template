@@ -105,6 +105,13 @@
     }
   }
 
+  .home{
+    .container > .d-flex{
+        .sidebar{
+          margin: 0;
+        }
+      }
+    }
   
 }
 
@@ -115,6 +122,97 @@
     }
   }
 
+  .home{
+    .container > .d-flex{
+        flex-direction: column !important;
+        .feed{
+          width: 100%;
+          order: 2;
+
+          .post{
+            margin: 1rem 0rem;
+          }
+        }
+
+        .sidebar{
+          width: 100%;
+          margin: 0;
+
+          .sort{
+            .heading{
+              display: none;
+
+              
+            }
+            .filter{
+              margin: 0;
+              padding: 0.5rem;
+              .filter-posts{
+                display: flex;
+                align-items: center;
+                i{
+                  margin: 0 0.2rem;
+                }
+                .fa-sort-down{
+                  padding-bottom: 0.3rem;
+                  margin-left: auto;
+                }
+              }
+
+              li{
+                display: none;
+              }
+            }
+
+          }
+
+          .suggested{
+            .heading{
+              margin-top: 0.2rem;
+              padding: 0 1rem;
+            }
+            .suggestions {
+              overflow: -moz-scrollbars-none;
+            }
+        
+            .suggestions::-webkit-scrollbar {
+              height: 0;
+              width: 0;
+            }
+            .suggestions{
+              display: flex;
+              margin-top: 0.4rem;
+              overflow: auto;
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+              overflow: -moz-scrollbars-none;
+              padding: 1rem 0;
+              .suggestion{
+                flex-shrink: 0;
+                flex-direction: column;
+                border: 1px solid $light-blue;
+                margin: 0 0.3rem;
+                padding: 1rem;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+                .avi{
+                  width: 60px;
+                  height: 60px;
+                }
+
+                .username{
+                  padding: 0.5rem 0;
+                }
+
+                .follow{
+                  margin: auto;
+                }
+              }
+            }
+          }
+
+        }
+    }
+  }
   
 }
 
@@ -292,6 +390,11 @@
   .movies-body{
     .movies-nav{
       font-size: 0.8rem;
+    }
+  }
+  .home{
+    .container{
+      padding: 0;
     }
   }
 }

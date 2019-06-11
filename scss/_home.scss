@@ -116,6 +116,8 @@
         }
       }
 
+      // Stuff on right side
+
       .sidebar{
         margin: 0 1.5rem;
         width: 30%;
@@ -126,6 +128,9 @@
           }
 
           .filter{
+            .filter-posts{
+              display: none;
+            }
             list-style: none;
             padding: 0;
             font-weight: 300;
@@ -149,6 +154,7 @@
 
         .suggested{
           .heading{
+            margin-top: 2rem;
             border-bottom: 1px solid $light-blue;
             font-weight: bold;
           }
