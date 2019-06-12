@@ -6,7 +6,9 @@ const filter = document.getElementById('filter-options');
 let filterActive = false;
 
 // Show filter options on filter link click
-filterPosts.addEventListener('click', showFilter);
+if(filterPosts != null) {
+  filterPosts.addEventListener('click', showFilter);
+}
 function showFilter(){
   if (!filterActive){
     filter.classList.add('show');
