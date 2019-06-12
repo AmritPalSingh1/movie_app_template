@@ -519,16 +519,16 @@
               }
   
               .subheading{
-                font-size: 0.8rem;
+                font-size: 0.75rem;
               }
   
               .following{
-                padding: 0 1.7rem;
+                padding: 0 1.5rem;
               }
 
               .follow{
                 margin-left: auto;
-                padding-right: 1rem;
+                padding-right: 0rem;
               }
             }
           }
@@ -536,9 +536,26 @@
 
         .body{
           &> .d-flex{
-            padding: 2rem 0rem !important;
+            padding: 0.5rem 0rem !important;
           }
         }
+      }
+    }
+    .body{
+      .switch-btns{
+        button{
+          font-size: 0.7rem;
+          padding: 0.6rem 2.3rem !important;
+        }
+        .top{
+          margin-right: -0.7rem!important;
+        }
+        .all{
+          margin-left: -0.7rem!important;
+        }
+      }
+      &> .d-flex{
+        padding: 10rem 1.7rem!important;
       }
     }
   }

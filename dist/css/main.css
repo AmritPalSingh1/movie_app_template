@@ -680,11 +680,30 @@ header {
         background-position: center;
         border-radius: 10px; }
         .profile .profile-body .user-info .container .body .top-movie-card .movie-card-overlay {
-          background-color: rgba(254, 81, 150, 0.8);
           height: 100%;
           padding: 1rem;
           padding-bottom: 1rem;
           border-radius: 10px; }
+        .profile .profile-body .user-info .container .body .top-movie-card .bg-1 {
+          background-color: rgba(213, 126, 235, 0.8); }
+        .profile .profile-body .user-info .container .body .top-movie-card .bg-2 {
+          background-color: rgba(230, 185, 128, 0.8); }
+        .profile .profile-body .user-info .container .body .top-movie-card .bg-3 {
+          background-color: rgba(132, 250, 176, 0.8); }
+        .profile .profile-body .user-info .container .body .top-movie-card .bg-4 {
+          background-color: rgba(56, 249, 215, 0.8); }
+        .profile .profile-body .user-info .container .body .top-movie-card .bg-5 {
+          background-color: rgba(0, 242, 254, 0.8); }
+        .profile .profile-body .user-info .container .body .top-movie-card .bg-6 {
+          background-color: rgba(79, 172, 254, 0.8); }
+        .profile .profile-body .user-info .container .body .top-movie-card .bg-7 {
+          background-color: rgba(254, 81, 150, 0.8); }
+        .profile .profile-body .user-info .container .body .top-movie-card .bg-8 {
+          background-color: rgba(220, 230, 90, 0.8); }
+        .profile .profile-body .user-info .container .body .top-movie-card .bg-9 {
+          background-color: rgba(230, 153, 90, 0.8); }
+        .profile .profile-body .user-info .container .body .top-movie-card .bg-10 {
+          background-color: rgba(118, 230, 90, 0.8); }
         .profile .profile-body .user-info .container .body .top-movie-card .poster img {
           height: 10rem;
           margin-bottom: 0; }
@@ -1168,11 +1187,20 @@ header {
         .profile .profile-body .user-info .container .stats > .d-flex .count {
           font-size: 1.4rem; }
         .profile .profile-body .user-info .container .stats > .d-flex .subheading {
-          font-size: 0.8rem; }
+          font-size: 0.75rem; }
         .profile .profile-body .user-info .container .stats > .d-flex .following {
-          padding: 0 1.7rem; }
+          padding: 0 1.5rem; }
         .profile .profile-body .user-info .container .stats > .d-flex .follow {
           margin-left: auto;
-          padding-right: 1rem; }
+          padding-right: 0rem; }
     .profile .profile-body .user-info .body > .d-flex {
-      padding: 2rem 0rem !important; } }
+      padding: 0.5rem 0rem !important; }
+  .profile .body .switch-btns button {
+    font-size: 0.7rem;
+    padding: 0.6rem 2.3rem !important; }
+  .profile .body .switch-btns .top {
+    margin-right: -0.7rem !important; }
+  .profile .body .switch-btns .all {
+    margin-left: -0.7rem !important; }
+  .profile .body > .d-flex {
+    padding: 10rem 1.7rem !important; } }
