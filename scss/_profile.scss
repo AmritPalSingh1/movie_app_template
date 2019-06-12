@@ -1,0 +1,101 @@
+.profile{
+  .profile-body{
+    position: relative;
+    .landing-movie-img{
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    .user-info{
+      position: absolute;
+      left: 0;
+      top: 5rem;
+      color: #fff;
+      width: 100%;
+
+      .container{
+        .stats{
+          padding-top: 3rem;
+          background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9) 75%);
+          .fullname{
+            text-align: center;
+            padding-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 300;
+          }
+          
+          .d-flex{
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+
+            .count{
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: $primary-color;
+            }
+
+            .subheading{
+              text-transform: uppercase;
+              font-size: 0.9rem;
+              color: #ccc;
+            }
+
+            .following{
+              padding: 0 2.5rem;
+            }
+
+            .follow{
+              margin-left:5rem;
+              font-size: 1.3rem;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .body{
+          background-color: rgba(0,0,0, 0.9);
+          min-height: 90vh;
+
+          .switch-btns{
+            text-align: center;
+            padding: 2rem 0;
+
+            button{
+              background-color: $dark-color;
+              border: none;
+              color: #aaa;
+              text-transform: uppercase;
+              padding: 0.6rem 3rem;
+              border-radius: 20px;
+              cursor: pointer;
+              z-index: 1;
+              position: relative;
+
+              &:focus{
+                outline: none;
+              }
+            }
+
+            .top{
+              margin-right: -1rem;
+            }
+            .all{
+              margin-left: -1rem;
+            }
+
+            .active{
+              background-color: $primary-color;
+              color: #fff;
+              z-index: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+}

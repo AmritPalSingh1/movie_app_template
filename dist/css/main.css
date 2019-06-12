@@ -596,6 +596,70 @@ header .menu {
               background-color: #fff;
               color: #23b1ec; }
 
+.profile .profile-body {
+  position: relative; }
+  .profile .profile-body .landing-movie-img img {
+    width: 100%;
+    height: auto; }
+  .profile .profile-body .user-info {
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    color: #fff;
+    width: 100%; }
+    .profile .profile-body .user-info .container .stats {
+      padding-top: 3rem;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9) 75%); }
+      .profile .profile-body .user-info .container .stats .fullname {
+        text-align: center;
+        padding-bottom: 1rem;
+        font-size: 2.5rem;
+        font-weight: 300; }
+      .profile .profile-body .user-info .container .stats .d-flex {
+        justify-content: center;
+        text-align: center;
+        align-items: center; }
+        .profile .profile-body .user-info .container .stats .d-flex .count {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #23b1ec; }
+        .profile .profile-body .user-info .container .stats .d-flex .subheading {
+          text-transform: uppercase;
+          font-size: 0.9rem;
+          color: #ccc; }
+        .profile .profile-body .user-info .container .stats .d-flex .following {
+          padding: 0 2.5rem; }
+        .profile .profile-body .user-info .container .stats .d-flex .follow {
+          margin-left: 5rem;
+          font-size: 1.3rem;
+          cursor: pointer; }
+    .profile .profile-body .user-info .container .body {
+      background-color: rgba(0, 0, 0, 0.9);
+      min-height: 90vh; }
+      .profile .profile-body .user-info .container .body .switch-btns {
+        text-align: center;
+        padding: 2rem 0; }
+        .profile .profile-body .user-info .container .body .switch-btns button {
+          background-color: #25262a;
+          border: none;
+          color: #aaa;
+          text-transform: uppercase;
+          padding: 0.6rem 3rem;
+          border-radius: 20px;
+          cursor: pointer;
+          z-index: 1;
+          position: relative; }
+          .profile .profile-body .user-info .container .body .switch-btns button:focus {
+            outline: none; }
+        .profile .profile-body .user-info .container .body .switch-btns .top {
+          margin-right: -1rem; }
+        .profile .profile-body .user-info .container .body .switch-btns .all {
+          margin-left: -1rem; }
+        .profile .profile-body .user-info .container .body .switch-btns .active {
+          background-color: #23b1ec;
+          color: #fff;
+          z-index: 2; }
+
 .search-section {
   background-color: #fff;
   padding: 2rem 0.5rem 5.5rem 0.5rem; }
