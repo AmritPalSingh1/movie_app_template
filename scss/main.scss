@@ -33,6 +33,10 @@ body {
   cursor: pointer;
 }
 
+.modal{
+  display: none;
+}
+
 
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -644,7 +648,58 @@ header {
   }
 }
 
+// Sign up and Sign in
+#sign-in, #sign-up{
+  padding: 0 1rem;
+  h3{
+    text-align: center;
+    font-weight: 300;
+  }
+
+  .facebook-btn{
+    text-align: center;
+    img{
+      width: 16rem;
+      cursor: pointer;
+    }
+  }
+  .log-in{
+    margin-top: 1rem;
+      border-radius: 6px;
+      input{
+      display: block;
+      width: 100%;
+      margin-bottom: 0.6rem;
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid $light-blue;
+      background-color: #f5f5f5;
+    }
+  }
+  .log-in-btn{
+    text-align: center;
+    margin-top: 1rem;
+
+    .btn{
+      cursor: pointer;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  p{
+    text-align: center;
+    font-size: 0.95rem;
+
+    a{
+      color: $primary-color;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
 @import "home";
 @import "profile";
 @import "movies";
 @import "mobile";
+

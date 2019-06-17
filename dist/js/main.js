@@ -139,3 +139,7 @@ function rightCursor() {
     castList.scrollLeft = beforeScroll;
   }
 }
+
+
+
+
