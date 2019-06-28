@@ -220,3 +220,8 @@ tmdb.getMovie(movieID).then(data => {
     }
   }
 });
+
+
+setTimeout(function(){
+  $('#message').fadeOut('slow');
+}, 3000);

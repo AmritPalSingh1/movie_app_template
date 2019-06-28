@@ -187,7 +187,6 @@ header {
   padding-top: 74px; }
 
 .dark-overlay {
-  height: 100%;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.58); }
 
@@ -353,8 +352,13 @@ header {
       .movie-info .details .full-details .date-released,
       .movie-info .details .full-details .runtime {
         margin: 1rem 0; }
-      .movie-info .details .full-details a {
-        margin-top: 1rem; }
+      .movie-info .details .full-details form {
+        display: inline; }
+      .movie-info .details .full-details a, .movie-info .details .full-details button {
+        margin-top: 1rem;
+        font-size: 1rem;
+        line-height: 1.7rem;
+        font-weight: 400; }
   .movie-info .cast-section {
     padding: 3rem 0; }
     .movie-info .cast-section .cast {
@@ -399,7 +403,7 @@ header {
       .movie-info .cast-section .actor-card .actor-overlay {
         color: #fff;
         background-color: rgba(0, 0, 0, 0.6);
-        height: 100%;
+        height: 268px;
         border-radius: 18px;
         box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.7); }
         .movie-info .cast-section .actor-card .actor-overlay h3 {
@@ -474,6 +478,8 @@ header {
     font-weight: 300; }
   #sign-in .facebook-btn, #sign-up .facebook-btn {
     text-align: center; }
+    #sign-in .facebook-btn a:focus, #sign-up .facebook-btn a:focus {
+      outline: none; }
     #sign-in .facebook-btn img, #sign-up .facebook-btn img {
       width: 16rem;
       cursor: pointer; }
@@ -501,6 +507,33 @@ header {
       color: #23b1ec;
       text-decoration: none;
       font-weight: bold; }
+
+.alert-container {
+  position: relative;
+  display: block; }
+
+.alert {
+  padding: 1rem;
+  border-radius: 3px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  margin-top: 1rem;
+  display: block; }
+
+.alert-success {
+  display: inline;
+  padding: 1rem 2rem;
+  background-color: #25262a;
+  border-radius: 5px;
+  color: #38f9d7; }
+
+.alert-danger {
+  display: inline;
+  background-color: #25262a;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  color: red; }
 
 .home {
   height: 100vh; }
@@ -634,6 +667,100 @@ header {
               background-color: #fff;
               color: #23b1ec; }
 
+#add-post {
+  background-color: #e5eff6;
+  padding: 1.5rem;
+  margin: 0 1.5rem 1.2rem 1.5rem; }
+  #add-post .sample-poster img {
+    width: 100%;
+    display: none; }
+  #add-post .post-text {
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #23b1ec; }
+    #add-post .post-text:focus {
+      outline: none; }
+  #add-post .add-poster {
+    position: relative;
+    display: inline-block; }
+    #add-post .add-poster .poster-inner {
+      position: absolute;
+      min-width: 150px;
+      max-height: 200px;
+      overflow: auto;
+      z-index: 1;
+      background-color: #fff; }
+      #add-post .add-poster .poster-inner a {
+        display: block;
+        padding: 0.2rem;
+        border-bottom: 1px solid #e5eff6;
+        text-decoration: none;
+        color: #25262a;
+        transition: all 0.25s ease-out;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        -ms-transition: all 0.25s ease-out; }
+        #add-post .add-poster .poster-inner a:hover {
+          background-color: #e5eff6; }
+        #add-post .add-poster .poster-inner a:focus {
+          background-color: #e5eff6; }
+    #add-post .add-poster .search-poster {
+      border: 1px solid #23b1ec;
+      padding: 0.4rem 0.2rem;
+      width: 150px;
+      font-size: 0.8rem; }
+      #add-post .add-poster .search-poster:focus {
+        outline: none; }
+    #add-post .add-poster .btn {
+      padding: 0.3rem 0.5rem; }
+  #add-post .post-btn {
+    margin-left: auto; }
+    #add-post .post-btn .btn {
+      cursor: pointer; }
+
+#top10-modal .heading {
+  font-size: 2rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
+  color: #25262a;
+  text-align: center; }
+
+#top10-modal .list {
+  width: 60vw; }
+  #top10-modal .list > .d-flex {
+    border-bottom: 1px solid #25262a;
+    padding: 0.5rem; }
+    #top10-modal .list > .d-flex .rank {
+      padding: 0.6rem 1rem; }
+    #top10-modal .list > .d-flex .name {
+      width: 75%;
+      padding: 0.6rem 1rem;
+      margin-left: 0.6rem; }
+    #top10-modal .list > .d-flex .buttons {
+      flex: auto;
+      margin-left: 0.6rem;
+      padding: 0.5rem 0.5rem 0.5rem 0rem;
+      font-weight: bold !important;
+      font-size: 1.1rem; }
+      #top10-modal .list > .d-flex .buttons .edit {
+        flex: auto; }
+        #top10-modal .list > .d-flex .buttons .edit div {
+          color: #23b1ec;
+          cursor: pointer;
+          flex: 1;
+          text-align: center; }
+      #top10-modal .list > .d-flex .buttons .delete-box {
+        margin-left: auto;
+        border-left: 1px solid #25262a;
+        padding-left: 0.6rem;
+        color: red; }
+        #top10-modal .list > .d-flex .buttons .delete-box .delete {
+          cursor: pointer; }
+
 .profile .dummy {
   position: fixed;
   height: 100vh;
@@ -656,7 +783,7 @@ header {
     width: 100%; }
     .profile .profile-body .user-info .container .stats {
       padding-top: 3rem;
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9) 75%); }
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.82) 75%); }
       .profile .profile-body .user-info .container .stats .fullname {
         text-align: center;
         padding-bottom: 1rem;
@@ -681,7 +808,12 @@ header {
           font-size: 1.3rem;
           cursor: pointer; }
     .profile .profile-body .user-info .container .body {
-      background-color: rgba(0, 0, 0, 0.9); }
+      background-color: rgba(0, 0, 0, 0.82); }
+      .profile .profile-body .user-info .container .body .edit {
+        padding-left: 2.3rem; }
+        .profile .profile-body .user-info .container .body .edit span {
+          cursor: pointer;
+          color: #ccc; }
       .profile .profile-body .user-info .container .body .switch-btns {
         text-align: center;
         padding: 2rem 0; }
@@ -935,7 +1067,7 @@ header {
       width: 90%;
       margin: auto; }
 
-.load-more {
+.load-more, .profile-load-more {
   background: none;
   border: 1px solid #23b1ec;
   color: #23b1ec;
@@ -945,11 +1077,14 @@ header {
   -webkit-transition: all 0.25s ease-out;
   -moz-transition: all 0.25s ease-out;
   -ms-transition: all 0.25s ease-out; }
-  .load-more i {
+  .load-more i, .profile-load-more i {
     margin-left: 0.5rem; }
-  .load-more:hover {
+  .load-more:hover, .profile-load-more:hover {
     background-color: #23b1ec;
     color: #fff; }
+  .load-more.profile-load-more, .profile-load-more.profile-load-more {
+    margin-bottom: 1.5rem;
+    display: none; }
 
 @media (max-width: 1300px) {
   .profile .profile-body .user-info .body > .d-flex {
@@ -1012,11 +1147,17 @@ header {
   .home .container > .d-flex .sidebar {
     margin: 0; }
   .profile .profile-body .user-info .body > .d-flex {
-    padding: 2rem 1rem !important; } }
+    padding: 2rem 1rem !important; }
+  #top10-modal .list {
+    width: 80vw; }
+    #top10-modal .list > .d-flex .name {
+      width: 80%; } }
 
 @media (max-width: 850px) {
   .movies-content .movie-card {
     width: 33.3%; }
+  #add-post {
+    margin: 0 1rem 1.2rem 1rem; }
   .home .container > .d-flex {
     flex-direction: column !important; }
     .home .container > .d-flex .feed {
@@ -1098,7 +1239,12 @@ header {
   .profile .profile-body .user-info .body > .d-flex {
     padding: 2rem 4rem !important; }
   .profile .profile-body .user-info .body .movie-card-padding {
-    width: 100% !important; } }
+    width: 100% !important; }
+  #top10-modal .list > .d-flex .name {
+    width: 75%; }
+  #add-post {
+    margin: 0 0rem 1.2rem 0rem;
+    padding: 1.3rem 0.5rem; } }
 
 @media (max-width: 700px) {
   .container {
@@ -1202,7 +1348,16 @@ header {
   .movies-body .movies-nav {
     font-size: 0.8rem; }
   .home .container {
-    padding: 0; } }
+    padding: 0; }
+  #top10-modal .list {
+    width: 95vw; }
+    #top10-modal .list > .d-flex {
+      padding: 0rem; }
+      #top10-modal .list > .d-flex .name {
+        width: 65%;
+        margin-left: 0.2rem; }
+      #top10-modal .list > .d-flex .buttons {
+        margin-left: 0.2rem; } }
 
 @media (max-width: 650px) {
   .movies-content .movie-card {

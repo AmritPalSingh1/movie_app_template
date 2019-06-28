@@ -1,3 +1,57 @@
+#top10-modal{
+  .heading{
+    font-size: 2rem;
+    font-weight: 300;
+    padding-bottom: 1rem;
+    color: $dark-color;
+    text-align: center;
+  }
+  .list{
+    width: 60vw;
+
+    &>.d-flex{
+      border-bottom: 1px solid $dark-color;
+      padding: 0.5rem;
+
+      .rank{
+        padding: 0.6rem 1rem;
+      }
+      .name{
+        width: 75%;
+        padding: 0.6rem 1rem;
+        margin-left: 0.6rem;
+      }
+      .buttons{
+        flex: auto;
+        margin-left: 0.6rem;
+        padding: 0.5rem 0.5rem 0.5rem 0rem;
+        font-weight: bold!important;
+        font-size: 1.1rem;
+        .edit{
+          flex: auto;
+          div{
+            color: $primary-color;
+            cursor: pointer;
+            flex: 1;
+            text-align: center;
+          }
+        }
+
+        .delete-box{
+          margin-left: auto;
+          border-left: 1px solid $dark-color;
+          padding-left: 0.6rem;
+          color: red;
+
+          .delete{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
 .profile{
   .dummy{
     position: fixed;
@@ -27,7 +81,7 @@
       .container{
         .stats{
           padding-top: 3rem;
-          background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.9) 75%);
+          background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.82) 75%);
           .fullname{
             text-align: center;
             padding-bottom: 1rem;
@@ -65,7 +119,15 @@
         }
 
         .body{
-          background-color: rgba(0,0,0, 0.9);
+          background-color: rgba(0,0,0, 0.82);
+
+          .edit{
+            padding-left: 2.3rem;
+            span{
+              cursor: pointer;
+              color: #ccc;
+            }
+          }
           .switch-btns{
             text-align: center;
             padding: 2rem 0;

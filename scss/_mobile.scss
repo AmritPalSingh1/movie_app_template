@@ -150,7 +150,18 @@
       }
     }
   }
-  
+
+  #top10-modal{ 
+    .list{
+      width: 80vw;
+
+      &>.d-flex{  
+        .name{
+          width: 80%;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 850px){
@@ -158,6 +169,9 @@
     .movie-card{
       width: 33.3%;
     }
+  }
+  #add-post{
+    margin: 0 1rem 1.2rem 1rem;
   }
 
   .home{
@@ -294,6 +308,22 @@
         }
       }
     }
+  }
+
+  #top10-modal{ 
+    .list{
+
+      &>.d-flex{  
+        .name{
+          width: 75%;
+        }
+      }
+    }
+  }
+
+  #add-post{
+    margin: 0 0rem 1.2rem 0rem;
+    padding: 1.3rem 0.5rem;
   }
   
 }
@@ -480,6 +510,24 @@
       padding: 0;
     }
   }
+
+  #top10-modal{ 
+    .list{
+      width: 95vw;
+
+      &>.d-flex{  
+        padding: 0rem;
+        .name{
+          width: 65%;
+          margin-left: 0.2rem;
+        }
+        .buttons{
+          margin-left: 0.2rem;
+        }
+      }
+    }
+  }
+  
 }
 
 @media (max-width: 650px){

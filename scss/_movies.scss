@@ -214,7 +214,7 @@
   }
 }
 
-.load-more{
+.load-more, .profile-load-more{
   background: none;
   border: 1px solid $primary-color;
   color: $primary-color;
@@ -230,5 +230,10 @@
   &:hover{
     background-color: $primary-color;
     color: #fff;
+  }
+
+  &.profile-load-more{
+    margin-bottom: 1.5rem;
+    display: none;
   }
 }
