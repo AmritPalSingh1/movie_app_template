@@ -137,16 +137,16 @@
           <div class="feed">
 
             <div id="add-post" class="shadow">
-              <form action="">
+              <form action="" autocomplete="off">
                 <div class="sample-poster">
-                  <img src="https://image.tmdb.org/t/p/w1280/phxiKFDvPeQj4AbkvJLmuZEieDU.jpg" alt="">
-                  <input type="hidden" name="movie-id" value="">
+                  <img src="https://image.tmdb.org/t/p/w1280/phxiKFDvPeQj4AbkvJLmuZEieDU.jpg" id="post-poster" alt="">
+                  <input type="hidden" name="movie-id" id="poster-id" value="">
               </div>
               <textarea rows="4" name="post-text" placeholder="In search of any movie? Have a movie you want to recommend?" class="post-text"></textarea>
               <div class="d-flex">
                 <div class="add-poster">
                   <div class="poster-inner">
-                    <input type="text" class="search-poster" placeholder="Add Movie poster...">
+                    <input type="text" class="search-poster" id="search-poster" placeholder="Add Movie poster...">
                     <a href="">Movie Name </a>
                     <a href="">Movie Name</a>
                     <a href="">Movie Name</a>
@@ -314,6 +314,7 @@
     <script src="./js/tmdb.js"></script>
     <script src="./js/movies.js"></script>
     <script src="./js/movie.js"></script>
+    <script src="./js/profile.js"></script>
     <script src="./js/main.js"></script>    
   </body>
 </html>

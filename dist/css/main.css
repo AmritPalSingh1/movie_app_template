@@ -671,9 +671,11 @@ header {
   background-color: #e5eff6;
   padding: 1.5rem;
   margin: 0 1.5rem 1.2rem 1.5rem; }
-  #add-post .sample-poster img {
-    width: 100%;
-    display: none; }
+  #add-post .sample-poster {
+    margin-bottom: 0.5rem; }
+    #add-post .sample-poster img {
+      width: 100%;
+      display: none; }
   #add-post .post-text {
     display: block;
     width: 100%;
